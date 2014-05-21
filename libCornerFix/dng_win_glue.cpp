@@ -284,7 +284,6 @@ bool dng_win_glue::saveCPFFile(NSString *file)
 {
 	bool retVal = false;
 	gDumpCPF.setFromString(file);
-	
 	if (gDumpCPF.NotEmpty () && (cpfState != kcpfStateNone)) {
 		
 		FILE *stream; 

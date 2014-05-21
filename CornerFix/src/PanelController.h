@@ -33,21 +33,17 @@
 * 1 Sept 2007 : 0.9.1.0 Mac version
 *
 */
+@class PanelController;
 
-/*
+/**
  * The text panel for CornerFix for the Mac.
  */
-
-#import <Cocoa/Cocoa.h>
-
-@class PanelController;
-//#include "PanelController.h"
-
 @interface TextController : NSObject {
 	PanelController *panelController;
-	}
+}
 - (IBAction)showTextPanel:(id)sender;
 @end
+
 
 @interface PanelController : NSWindowController {
 	IBOutlet NSTextView *text;

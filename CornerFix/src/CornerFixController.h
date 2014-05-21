@@ -48,6 +48,8 @@
 #import <Cocoa/Cocoa.h>
 #include "CFViewController.h"
 
+class dng_win_glue;
+
 @interface CornerFixController : NSObject
 {
     IBOutlet NSImageView *correctedImage;
@@ -72,12 +74,11 @@
 	int progressState;
 	int validateRetVal;
 	bool batchMode;	
-	void * glue;
+	dng_win_glue * glue;
 	NSFileManager * fileManager;
 	bool disableMenu;
 	long long prefsSignature;
 	bool sheetNotDone;
-
 }
 
 - (void) runWorkerAsync:(id)param;

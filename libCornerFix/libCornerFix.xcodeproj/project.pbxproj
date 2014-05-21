@@ -272,7 +272,6 @@
 		893083AD192C5BEE0079DAA6 /* dng_xy_coord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8930819A192C5BEE0079DAA6 /* dng_xy_coord.cpp */; };
 		893083AE192C5BEE0079DAA6 /* dng_xy_coord.h in Headers */ = {isa = PBXBuildFile; fileRef = 8930819B192C5BEE0079DAA6 /* dng_xy_coord.h */; };
 		893083AF192C5BEE0079DAA6 /* dng_xy_coord.h in Headers */ = {isa = PBXBuildFile; fileRef = 8930819B192C5BEE0079DAA6 /* dng_xy_coord.h */; };
-		89361905192BF1A6003E5A18 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89361904192BF1A6003E5A18 /* CoreServices.framework */; };
 		89BCB954192BD09600C5EB28 /* dng_host.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89BCB920192BC80F00C5EB28 /* dng_host.cpp */; };
 		89BCB955192BD09600C5EB28 /* dng_devignette_negative.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5C31063D4CF00E99A08 /* dng_devignette_negative.cpp */; };
 		89BCB956192BD09600C5EB28 /* dng_file_string.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5C51063D4CF00E99A08 /* dng_file_string.cpp */; };
@@ -334,7 +333,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		256AC3F00F4B6AF500CF3369 /* CornerFix_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CornerFix_Prefix.pch; sourceTree = "<group>"; };
 		2660E5C31063D4CF00E99A08 /* dng_devignette_negative.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dng_devignette_negative.cpp; sourceTree = "<group>"; };
 		2660E5C41063D4CF00E99A08 /* dng_devignette_negative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dng_devignette_negative.h; sourceTree = "<group>"; };
 		2660E5C51063D4CF00E99A08 /* dng_file_string.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dng_file_string.cpp; sourceTree = "<group>"; };
@@ -496,7 +494,6 @@
 		89308199192C5BEE0079DAA6 /* dng_xmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dng_xmp.h; sourceTree = "<group>"; };
 		8930819A192C5BEE0079DAA6 /* dng_xy_coord.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dng_xy_coord.cpp; sourceTree = "<group>"; };
 		8930819B192C5BEE0079DAA6 /* dng_xy_coord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dng_xy_coord.h; sourceTree = "<group>"; };
-		89361904192BF1A6003E5A18 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		89BCB903192BBA5C00C5EB28 /* XMPToolkitSDK64.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XMPToolkitSDK64.xcodeproj; path = "XMP-SDK/build/xcode/static/intel_64/XMPToolkitSDK64.xcodeproj"; sourceTree = "<group>"; };
 		89BCB917192BBFA400C5EB28 /* libXMPCoreStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libXMPCoreStatic.a; path = "XMP-SDK/public/libraries/macintosh/intel_64/Debug/libXMPCoreStatic.a"; sourceTree = "<group>"; };
 		89BCB918192BBFA400C5EB28 /* libXMPFilesStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libXMPFilesStatic.a; path = "XMP-SDK/public/libraries/macintosh/intel_64/Debug/libXMPFilesStatic.a"; sourceTree = "<group>"; };
@@ -511,7 +508,6 @@
 		89F7AD25192C0C3600B83C33 /* staticLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = staticLib.h; sourceTree = "<group>"; };
 		89F7AD26192C0C3600B83C33 /* staticLibPriv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = staticLibPriv.h; sourceTree = "<group>"; };
 		89F7AD27192C0C3600B83C33 /* staticLib.cp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = staticLib.cp; sourceTree = "<group>"; };
-		89F7AD7B192C0CFE00B83C33 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		89F7AD7D192C0D0400B83C33 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -520,7 +516,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89361905192BF1A6003E5A18 /* CoreServices.framework in Frameworks */,
 				89BCB9A6192BD15500C5EB28 /* libc++.dylib in Frameworks */,
 				89BCB964192BD0D900C5EB28 /* libXMPCoreStatic.a in Frameworks */,
 			);
@@ -731,7 +726,6 @@
 			children = (
 				89BCB903192BBA5C00C5EB28 /* XMPToolkitSDK64.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				89F7AD20192C0C3600B83C33 /* staticLib */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -739,20 +733,10 @@
 			name = CornerFix;
 			sourceTree = "<group>";
 		};
-		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				256AC3F00F4B6AF500CF3369 /* CornerFix_Prefix.pch */,
-			);
-			name = "Other Sources";
-			sourceTree = "<group>";
-		};
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				89F7AD7D192C0D0400B83C33 /* CoreServices.framework */,
-				89F7AD7B192C0CFE00B83C33 /* CoreFoundation.framework */,
-				89361904192BF1A6003E5A18 /* CoreServices.framework */,
 				89BCB91C192BC70B00C5EB28 /* libc++.dylib */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);

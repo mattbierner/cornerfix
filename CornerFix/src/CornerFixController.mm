@@ -102,7 +102,7 @@
 		
 			NSFileHandle *myhandle = [[NSFileHandle alloc] initWithFileDescriptor:fd];
 			[myhandle closeFile];
-			((dng_win_glue *)glue)->setOutputFile(tempFile);
+			glue->setOutputFile(tempFile);
 			[myhandle release];
 		}
 	}
@@ -224,15 +224,14 @@
 - (void) wakeupProgressSheet {
 	if (!progressSheet) {
 		//Check the ProgressSheet instance variable to make sure the custom sheet does not already exist.
-		[NSBundle loadNibNamed: @"ProgressSheet" owner: self];
+		[[NSBundle mainBundle] loadNibNamed: @"ProgressSheet" owner: self topLevelObjects: nil];
 		[progressSheet setOpaque:NO]; // YES by default
 		NSColor *semiTransparentBlue =
 			[NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.3 alpha:0.7];
 		[progressSheet setBackgroundColor:semiTransparentBlue];
 		
 		[progressSheet setAlphaValue:0.9];
-	}	
-	
+	}
 }
 
 
@@ -241,12 +240,7 @@
 	[splitView setDelegate:viewController];
 	
 //	[sheetProgress setDisplayedWhenStopped:NO];
-	[self updateDisplay];	
-	
-	if ([window respondsToSelector:@selector(setBottomCornerRounded:)]) {
-		[window performSelector:@selector(setBottomCornerRounded:) withObject:nil];
-	}
-			
+	[self updateDisplay];
 	[self wakeupProgressSheet];
 }
 
@@ -271,39 +265,30 @@
 	[userDefaults synchronize];
 
     if (tempFile) {
-#if MAC_OS_X_VERSION_MIN_REQUIRED > MAC_OS_X_VERSION_10_4
 		[fileManager removeItemAtPath:tempFile error:NULL];;
-#else
-		[fileManager removeFileAtPath:tempFile handler:nil];
-#endif
 		tempFile = nil;
 	}
-	if (glue)
-	{
-		delete ((dng_win_glue *)glue);
+    
+	if (glue) {
+		delete glue;
 		glue = nil;
 	}
 
 }
 
-- (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)app 
+- (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)__unused app
 {
     if (tempFile) {
-#if MAC_OS_X_VERSION_MIN_REQUIRED > MAC_OS_X_VERSION_10_4
 		[fileManager removeItemAtPath:tempFile error:NULL];;
-#else
-		[fileManager removeFileAtPath:tempFile handler:nil];
-#endif 
 		tempFile = nil;
 	}
-	if (glue)
-	{
-		delete ((dng_win_glue *)glue);
+    
+	if (glue) {
+		delete glue;
 		glue = nil;
 	}
 	
 	return NSTerminateNow;
-	
 }
 
 - (BOOL)validateUserInterfaceItem:(id <NSValidatedUserInterfaceItem>)anItem
@@ -368,72 +353,46 @@
 }
 
 
-
 - (void)didEndSheet:(NSWindow *)sheet returnCode:(int)returnCode contextInfo:(void *)contextInfo
 {
     [sheet orderOut:self];
 }
 
 
-
-
-- (NSArray *) convertExtensions:(NSArray *) files extension: (NSString *) extension {
-				
-	NSArray * retVal; 
-
+- (NSArray *) convertExtensions:(NSArray *) files extension: (NSString *) extension
+{
 	if (files && extension) 
 	{
-		
-		NSString *aFile;
 		NSMutableArray *newArray = [NSMutableArray arrayWithCapacity:[files count]];
-		NSEnumerator *fileEnumerator = [files objectEnumerator];
-		while (aFile = [fileEnumerator nextObject]) {
+		for (NSString* aFile in files) {
 			[newArray addObject:[[aFile stringByDeletingPathExtension] stringByAppendingPathExtension:extension]];
 		}
-		retVal = newArray;
+		return newArray;
 	}
-	else {
-		retVal = nil;
-	}
-	
-	return retVal;		
-						
+    return nil;
 }
 
 
-- (NSArray *) renameFiles:(NSArray *) files suffix: (NSString *) suffix {
-				
-	NSArray * retVal; 
-	
+- (NSArray *) renameFiles:(NSArray *) files suffix: (NSString *) suffix
+{
 	if (files && suffix) 
 	{
-		
-		NSString *aFile;
-		NSMutableArray *newArray = [NSMutableArray arrayWithCapacity:[files count]];
-		NSEnumerator *fileEnumerator = [files objectEnumerator];
-		while (aFile = [fileEnumerator nextObject]) {
+        NSMutableArray *newArray = [NSMutableArray arrayWithCapacity:[files count]];
+		for (NSString* aFile in files) {
 			[newArray addObject:[[[aFile stringByDeletingPathExtension] stringByAppendingString:suffix] stringByAppendingPathExtension:[aFile pathExtension]]];
 		}
-		retVal = newArray;
+		return newArray;
 	}
-	else {
-		retVal = nil;
-	}
-	
-	return retVal;		
-	
+    return nil;
 }
-
 
 
 - (void) updateDisplay
 {
-	
 	if (imageFiles && ([imageFiles count] > 0 ))
 	{
 		NSImage *image = nil;
-//		[window setTitleWithRepresentedFilename:[imageFiles objectAtIndex:0]];
-		[window setTitle:[[imageFiles objectAtIndex:0]lastPathComponent]];
+		[window setTitle:[[imageFiles objectAtIndex:0] lastPathComponent]];
 
 		image = [[[ThumbNSImage alloc]
 			preferredInitFromFilename:[imageFiles objectAtIndex:0] 
@@ -464,7 +423,7 @@
 		[window setTitle:@CornerFixNameString];
 	}
 	
-	switch (((dng_win_glue *)glue)->getCPFState()) {
+	switch (glue->getCPFState()) {
 		case kcpfStateNone:
 			readyMsg = @"Ready....";
 			break;
@@ -486,51 +445,45 @@
 
 - (void) backgroundWorker1_DoWork {
 	validateRetVal = dng_error_none;
-	if (imageFiles != nil) 
-	{
-		int index = 0;
-		NSString *file;
-		NSEnumerator *fileEnumerator = [imageFiles objectEnumerator];
-		while (file = [fileEnumerator nextObject])
-		{
-			if (validateRetVal == dng_error_none)
-			{
-				if (([fileManager fileExistsAtPath:file]) && ([fileManager isReadableFileAtPath:file]))
-				{
-					if ((outputFiles) && ([outputFiles count] > 0))
-					{
-						((dng_win_glue *)glue)->setOutputFile([outputFiles objectAtIndex:index]);
-					}
-					else {
-						((dng_win_glue *)glue)->setOutputFile(tempFile);
-						if ((cpfFiles) && ([cpfFiles count] > 0) && batchMode) 
-						{
-							((dng_win_glue *)glue)->setBuildCPF();
-							((dng_win_glue *)glue)->setOutputFile(@"");
-						}
-						else 
-						{
-							((dng_win_glue *)glue)->setOutputFile(tempFile);
-						}
-						
-					}
-					((dng_win_glue *)glue)->setImage(file);
-					validateRetVal = ((dng_win_glue *)glue)->dng_validate();
-					if (!outputFiles && batchMode && (validateRetVal == dng_error_none))
-					{
-						((dng_win_glue *)glue)->saveCPFFile([cpfFiles objectAtIndex:index]);;
-					}
-					
-				}
-			}
-			index++;
-			
-		}
-	}
+    int index = 0;
+    for (NSString* file in imageFiles)
+    {
+        if (validateRetVal == dng_error_none)
+        {
+            if (([fileManager fileExistsAtPath:file]) && ([fileManager isReadableFileAtPath:file]))
+            {
+                if ((outputFiles) && ([outputFiles count] > 0))
+                {
+                    glue->setOutputFile([outputFiles objectAtIndex:index]);
+                }
+                else {
+                    glue->setOutputFile(tempFile);
+                    if ((cpfFiles) && ([cpfFiles count] > 0) && batchMode) 
+                    {
+                        glue->setBuildCPF();
+                        glue->setOutputFile(@"");
+                    }
+                    else 
+                    {
+                        glue->setOutputFile(tempFile);
+                    }
+                    
+                }
+                glue->setImage(file);
+                validateRetVal = glue->dng_validate();
+                if (!outputFiles && batchMode && (validateRetVal == dng_error_none))
+                {
+                    glue->saveCPFFile([cpfFiles objectAtIndex:index]);;
+                }
+                
+            }
+        }
+        index++;
+    }
 }
 
 
-- (void) RunWorkerCompleted:(id)param
+- (void) RunWorkerCompleted:(id) __unused param
 {
 	[NSApp endSheet:progressSheet];
 	if ((validateRetVal != dng_error_none) && (validateRetVal != CornerFix_unknown_model) && (validateRetVal != CornerFix_saturated)
@@ -683,7 +636,7 @@
 		batchMode = false;
 		if ((cpfFiles) && ([cpfFiles count] > 0)) {
 			cpfFiles = nil;
-			((dng_win_glue *)glue)->resetCPF();
+			glue->resetCPF();
 		}
 		else
 		{
@@ -702,7 +655,7 @@
 
 
 
-- (void) runWorkerAsync:(id)param
+- (void) runWorkerAsync:(id) __unused param
 {
 	disableMenu = YES;
 #if defined(MULTITHREAD)
@@ -732,23 +685,23 @@
 //#define genCSVFile
 #ifdef genCSVFile
 	#pragma message("WARNING - Compiling CSV Options in")
-		((dng_win_glue *)glue)->setCSVFile([[[imageFiles objectAtIndex:0] stringByDeletingPathExtension] stringByAppendingString:@".csv"]);
-		((dng_win_glue *)glue)->setTIFFile([[[imageFiles objectAtIndex:0] stringByDeletingPathExtension] stringByAppendingString:@".tif"]);
+		glue->setCSVFile([[[imageFiles objectAtIndex:0] stringByDeletingPathExtension] stringByAppendingString:@".csv"]);
+		glue->setTIFFile([[[imageFiles objectAtIndex:0] stringByDeletingPathExtension] stringByAppendingString:@".tif"]);
 #endif
-		 ((dng_win_glue *)glue)->setVerbose([[NSUserDefaults standardUserDefaults] boolForKey:@"verboseMessages"]);
-		 ((dng_win_glue *)glue)->setMultiple([[NSUserDefaults standardUserDefaults] boolForKey:@"multipleEquations"]);
-		 ((dng_win_glue *)glue)->setDisableIlluminant(![[NSUserDefaults standardUserDefaults] boolForKey:@"luminanceCompensation"]);
-		 ((dng_win_glue *)glue)->SetAntiAlias([[NSUserDefaults standardUserDefaults] integerForKey:@"antiAliasStrength"]);
-		 ((dng_win_glue *)glue)->SetLumaStrength([[NSUserDefaults standardUserDefaults] integerForKey:@"luminance"]);
-		 ((dng_win_glue *)glue)->SetChromaStrength([[NSUserDefaults standardUserDefaults] integerForKey:@"chroma"]);
-		 ((dng_win_glue *)glue)->setCompress([[NSUserDefaults standardUserDefaults] boolForKey:@"levelCompression"]);
-		 ((dng_win_glue *)glue)->setLossless([[NSUserDefaults standardUserDefaults] boolForKey:@"losslessCompression"]);
-		 ((dng_win_glue *)glue)->setExifUpdate([[NSUserDefaults standardUserDefaults] boolForKey:@"updateEXIF"]);
-		 ((dng_win_glue *)glue)->setCalculateAperture([[NSUserDefaults standardUserDefaults] boolForKey:@"calculateAperture"]);
-		 ((dng_win_glue *)glue)->setClipApertures([[NSUserDefaults standardUserDefaults] boolForKey:@"clipAperture"]);
-		 ((dng_win_glue *)glue)->setMaximizeResolution([[NSUserDefaults standardUserDefaults] boolForKey:@"maximizeResolution"]);
-         ((dng_win_glue *)glue)->setOverwriteCameraName([[NSUserDefaults standardUserDefaults] boolForKey:@"appleDNGWorkaround"]);
-         ((dng_win_glue *)glue)->setAsymetry([[NSUserDefaults standardUserDefaults] boolForKey:@"bidirectionalCorrection"] ? 1.0 : 500);
+		 glue->setVerbose([[NSUserDefaults standardUserDefaults] boolForKey:@"verboseMessages"]);
+		 glue->setMultiple([[NSUserDefaults standardUserDefaults] boolForKey:@"multipleEquations"]);
+		 glue->setDisableIlluminant(![[NSUserDefaults standardUserDefaults] boolForKey:@"luminanceCompensation"]);
+		 glue->SetAntiAlias([[NSUserDefaults standardUserDefaults] integerForKey:@"antiAliasStrength"]);
+		 glue->SetLumaStrength([[NSUserDefaults standardUserDefaults] integerForKey:@"luminance"]);
+		 glue->SetChromaStrength([[NSUserDefaults standardUserDefaults] integerForKey:@"chroma"]);
+		 glue->setCompress([[NSUserDefaults standardUserDefaults] boolForKey:@"levelCompression"]);
+		 glue->setLossless([[NSUserDefaults standardUserDefaults] boolForKey:@"losslessCompression"]);
+		 glue->setExifUpdate([[NSUserDefaults standardUserDefaults] boolForKey:@"updateEXIF"]);
+		 glue->setCalculateAperture([[NSUserDefaults standardUserDefaults] boolForKey:@"calculateAperture"]);
+		 glue->setClipApertures([[NSUserDefaults standardUserDefaults] boolForKey:@"clipAperture"]);
+		 glue->setMaximizeResolution([[NSUserDefaults standardUserDefaults] boolForKey:@"maximizeResolution"]);
+         glue->setOverwriteCameraName([[NSUserDefaults standardUserDefaults] boolForKey:@"appleDNGWorkaround"]);
+         glue->setAsymetry([[NSUserDefaults standardUserDefaults] boolForKey:@"bidirectionalCorrection"] ? 1.0 : 500);
 		
 		 // Start the asynchronous operation.
 		[sheetStatusField setStringValue:@"Processing........."];
@@ -824,7 +777,7 @@
 
 
 
-- (IBAction)openPreferencesWindow:(id)sender
+- (IBAction)openPreferencesWindow:(id) __unused sender
 {
 	[self prefsSignatureChanged];
 	PrefsWindowController *pControl = (PrefsWindowController *) [PrefsWindowController sharedPrefsWindowController];
@@ -837,10 +790,8 @@
 
  // User/Filesystem interactions.
 
-- (IBAction) openDocument: sender
+- (IBAction) openDocument:(id) __unused sender
 {
-	
-	int result;
     NSArray *fileTypes = [NSArray arrayWithObject:@"dng"];
     NSOpenPanel *oPanel = [NSOpenPanel openPanel];
 	
@@ -850,28 +801,28 @@
     }
     [oPanel setAllowedFileTypes:fileTypes];
     
-    result = [oPanel runModal];
+    int result = [oPanel runModal];
     if (result == NSOKButton) {
-		if (([fileManager fileExistsAtPath:[oPanel filename]]) && ([fileManager isReadableFileAtPath:[oPanel filename]])) {
+        NSString* path = [[oPanel URL] path];
+		if (([fileManager fileExistsAtPath:path]) && ([fileManager isReadableFileAtPath:path])) {
 			[imageFiles release];
 			imageFiles = nil;
 			imageFiles = [[oPanel filenames] retain];
 			[imageDirectory release];
 			imageDirectory = nil;
-			imageDirectory = [[[oPanel filename] stringByDeletingLastPathComponent] retain];
+			imageDirectory = [[path stringByDeletingLastPathComponent] retain];
 			[outputFiles release];
 			outputFiles = nil;
 		}
-		((dng_win_glue *)glue)->setImage([oPanel filename]);	
+		glue->setImage(path);
 		[self updateDisplay];
 		[self processImages];
     }
 }	
 
 
-- (IBAction) openProfile: sender
+- (IBAction) openProfile: __unused sender
 {
-	int result;
     NSArray *fileTypes = [NSArray arrayWithObject:@"cpf"];
     NSOpenPanel *oPanel = [NSOpenPanel openPanel];
 	
@@ -882,11 +833,11 @@
 
     [oPanel setAllowedFileTypes:fileTypes];
     
-    result = [oPanel runModal];
-
+    int result = [oPanel runModal];
     if (result == NSOKButton) {
-		if (([fileManager fileExistsAtPath:[oPanel filename]]) && ([fileManager isReadableFileAtPath:[oPanel filename]])) {
-			if (!((dng_win_glue *)glue)->setCPFFile([oPanel filename])) 
+        NSString* path = [[oPanel URL] path];
+		if (([fileManager fileExistsAtPath:path]) && ([fileManager isReadableFileAtPath:path])) {
+			if (!glue->setCPFFile(path))
 			{
 				NSAlert *alert = [[NSAlert alloc] init];
 				[alert addButtonWithTitle:@"OK"];
@@ -911,21 +862,14 @@
 }
 
 
-
-- (IBAction) saveDocument: sender
-  {
-	
+- (IBAction) saveDocument: __unused sender
+{
 	if (imageFiles && ([imageFiles count] > 0)) {	
-		
-		NSSavePanel *sp;
-		int runResult;
-		 
-		/* create or get the shared instance of NSSavePanel */
-		sp = [NSSavePanel savePanel];
+        int runResult;
+		NSSavePanel *sp = [NSSavePanel savePanel];
 		 
 		/* set up new attributes */
-	//	[sp setAccessoryView:newView];
-        [sp setAllowedFileTypes:[NSArray arrayWithObject:@"dng"]];
+        [sp setAllowedFileTypes:@[@"dng"]];
 		 
 		/* display the NSSavePanel */
 		[outputFiles release];
@@ -943,20 +887,13 @@
 		/* if successful, save file under designated name */
 		if (runResult == NSOKButton) {
 			//Does this already exists?
-			if ([fileManager fileExistsAtPath:[sp filename]]) {
-#if MAC_OS_X_VERSION_MIN_REQUIRED > MAC_OS_X_VERSION_10_4
-				[fileManager removeItemAtPath:tempFile error:NULL];;
-#else
-				[fileManager removeFileAtPath:tempFile handler:nil];
-#endif
+            NSString* path = [[sp URL] path];
+			if ([fileManager fileExistsAtPath:path]) {
+				[fileManager removeItemAtPath:tempFile error:NULL];
 			}
-#if MAC_OS_X_VERSION_MIN_REQUIRED > MAC_OS_X_VERSION_10_4
-			if ([fileManager copyItemAtPath:tempFile toPath:[sp filename] error:NULL]) {
-#else
-			if ([fileManager copyPath:tempFile toPath:[sp filename] handler:nil]) {
-#endif			
+			if ([fileManager copyItemAtPath:tempFile toPath:path error:NULL]) {
 				[imageDirectory release];
-				imageDirectory = [[[sp filename] stringByDeletingLastPathComponent] retain];				
+				imageDirectory = [[path stringByDeletingLastPathComponent] retain];
 			}
 			else {
 				NSAlert *alert = [[NSAlert alloc] init];
@@ -989,16 +926,15 @@
 	}
   }
 
-- (IBAction) createProfile: sender
+- (IBAction) createProfile: __unused sender
 {
 	 if (imageFiles) 
 	 {
-		 ((dng_win_glue *)glue)->setBuildCPF();
+		 glue->setBuildCPF();
 		 [cpfFiles release];
 		 cpfFiles = [[self convertExtensions:imageFiles extension:@"cpf"] retain];
 		 [self processImages];
 		 [self updateDisplay];
-
 	 }
 	 else 
 	 {
@@ -1017,10 +953,10 @@
 }
 
 
-- (IBAction) saveProfile: sender
+- (IBAction) saveProfile: __unused sender
 {
 
-	if (((dng_win_glue *)glue)->getCPFState() != kcpfStateNone) {	
+	if (glue->getCPFState() != kcpfStateNone) {	
 		
 		NSSavePanel *sp;
 		int runResult;
@@ -1043,7 +979,7 @@
 		
 		/* if successful, save file under designated name */
 		if (runResult == NSOKButton) {
-			if (((dng_win_glue *)glue)->saveCPFFile([sp filename])) {
+			if (glue->saveCPFFile([sp filename])) {
 				[cpfFiles release];
 				cpfFiles = [[NSArray arrayWithObject:[[sp filename]retain]] retain];
 				[cpfDirectory release];
@@ -1081,7 +1017,6 @@
 	}
 	
 }
-
 
 
 - (IBAction) batchDocument: sender

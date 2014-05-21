@@ -25,6 +25,14 @@
 		2660E6E41063D58F00E99A08 /* ProgressSheet.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2660E6D51063D58F00E99A08 /* ProgressSheet.nib */; };
 		2660E6E51063D58F00E99A08 /* TextPanel.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2660E6D61063D58F00E99A08 /* TextPanel.nib */; };
 		267B260C12A415E100CEAF29 /* thumbnailWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 267B260B12A415E100CEAF29 /* thumbnailWrapper.mm */; };
+		89471B21192D016C0065B6A4 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BCB9A4192BD14800C5EB28 /* CoreServices.framework */; };
+		89471B24192D016C0065B6A4 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 89471B23192D016C0065B6A4 /* main.c */; };
+		89471B26192D016C0065B6A4 /* CornerFixCL.1 in Copy Files */ = {isa = PBXBuildFile; fileRef = 89471B25192D016C0065B6A4 /* CornerFixCL.1 */; };
+		89471B44192D021A0065B6A4 /* libstaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7AD81192C492400B83C33 /* libstaticLib.a */; };
+		89471B47192D09160065B6A4 /* CornerFixManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 89471B46192D09160065B6A4 /* CornerFixManager.mm */; };
+		89471B6B192D27EA0065B6A4 /* libArgumentParser-Static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89471B68192D27C90065B6A4 /* libArgumentParser-Static.a */; };
+		89471B6E192D3ADC0065B6A4 /* ImageProcessor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 89471B6D192D3ADC0065B6A4 /* ImageProcessor.mm */; };
+		89471B71192D42CB0065B6A4 /* CornerFixFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 89471B70192D42CB0065B6A4 /* CornerFixFile.m */; };
 		897AA77D192C4FDD002F0F6D /* InfoPlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 897AA77C192C4FDD002F0F6D /* InfoPlist.txt */; };
 		897AA784192C5049002F0F6D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 897AA77E192C5049002F0F6D /* Credits.rtf */; };
 		897AA785192C5049002F0F6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 897AA780192C5049002F0F6D /* InfoPlist.strings */; };
@@ -42,6 +50,62 @@
 			remoteGlobalIDString = 89BCB950192BD07800C5EB28;
 			remoteInfo = CornerFix;
 		};
+		89471B41192D020C0065B6A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 893618F4192BF05F003E5A18 /* libCornerFix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 89F7AD1E192C0C3600B83C33;
+			remoteInfo = staticLib;
+		};
+		89471B5D192D27C90065B6A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89471B54192D27C80065B6A4 /* ArgumentParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DACF2EC414FD3B2F0097C754;
+			remoteInfo = desc;
+		};
+		89471B5F192D27C90065B6A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89471B54192D27C80065B6A4 /* ArgumentParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DACF2EDF14FD3B630097C754;
+			remoteInfo = "long-desc";
+		};
+		89471B61192D27C90065B6A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89471B54192D27C80065B6A4 /* ArgumentParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DACF2EF214FD3B7A0097C754;
+			remoteInfo = spiffy;
+		};
+		89471B63192D27C90065B6A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89471B54192D27C80065B6A4 /* ArgumentParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA00447A155D94FF0028A012;
+			remoteInfo = "ArgumentParser-Dynamic";
+		};
+		89471B65192D27C90065B6A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89471B54192D27C80065B6A4 /* ArgumentParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA00448C155D94FF0028A012;
+			remoteInfo = ArgumentParserTests;
+		};
+		89471B67192D27C90065B6A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89471B54192D27C80065B6A4 /* ArgumentParser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA87348918970AB800113896;
+			remoteInfo = "ArgumentParser-Static";
+		};
+		89471B69192D27E10065B6A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89471B54192D27C80065B6A4 /* ArgumentParser.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DA87348818970AB800113896;
+			remoteInfo = "ArgumentParser-Static";
+		};
 		897AA778192C4A90002F0F6D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 893618F4192BF05F003E5A18 /* libCornerFix.xcodeproj */;
@@ -57,6 +121,20 @@
 			remoteInfo = staticLib;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		89471B1E192D016C0065B6A4 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				89471B26192D016C0065B6A4 /* CornerFixCL.1 in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -92,6 +170,16 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		893618F4192BF05F003E5A18 /* libCornerFix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libCornerFix.xcodeproj; path = ../libCornerFix/libCornerFix.xcodeproj; sourceTree = "<group>"; };
+		89471B20192D016C0065B6A4 /* CornerFixCL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CornerFixCL; sourceTree = BUILT_PRODUCTS_DIR; };
+		89471B23192D016C0065B6A4 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		89471B25192D016C0065B6A4 /* CornerFixCL.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = CornerFixCL.1; sourceTree = "<group>"; };
+		89471B45192D09160065B6A4 /* CornerFixManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CornerFixManager.h; path = src/CornerFixManager.h; sourceTree = SOURCE_ROOT; };
+		89471B46192D09160065B6A4 /* CornerFixManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CornerFixManager.mm; path = src/CornerFixManager.mm; sourceTree = SOURCE_ROOT; };
+		89471B54192D27C80065B6A4 /* ArgumentParser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ArgumentParser.xcodeproj; path = ../lib/ArgumentParser/ArgumentParser.xcodeproj; sourceTree = "<group>"; };
+		89471B6C192D3ADC0065B6A4 /* ImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageProcessor.h; path = src/ImageProcessor.h; sourceTree = "<group>"; };
+		89471B6D192D3ADC0065B6A4 /* ImageProcessor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ImageProcessor.mm; path = src/ImageProcessor.mm; sourceTree = "<group>"; };
+		89471B6F192D42CB0065B6A4 /* CornerFixFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CornerFixFile.h; path = src/CornerFixFile.h; sourceTree = "<group>"; };
+		89471B70192D42CB0065B6A4 /* CornerFixFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CornerFixFile.m; path = src/CornerFixFile.m; sourceTree = "<group>"; };
 		897AA77C192C4FDD002F0F6D /* InfoPlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = InfoPlist.txt; path = resources/InfoPlist.txt; sourceTree = "<group>"; };
 		897AA77F192C5049002F0F6D /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = Credits.rtf; sourceTree = "<group>"; };
 		897AA781192C5049002F0F6D /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -102,6 +190,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		89471B1D192D016C0065B6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89471B6B192D27EA0065B6A4 /* libArgumentParser-Static.a in Frameworks */,
+				89471B44192D021A0065B6A4 /* libstaticLib.a in Frameworks */,
+				89471B21192D016C0065B6A4 /* CoreServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072E0486CEB800E47090 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -117,6 +215,8 @@
 		080E96DDFE201D6D7F000001 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				89471B6C192D3ADC0065B6A4 /* ImageProcessor.h */,
+				89471B6D192D3ADC0065B6A4 /* ImageProcessor.mm */,
 				2660E5BA1063D4CF00E99A08 /* CFViewController.h */,
 				2660E5BB1063D4CF00E99A08 /* CFViewController.m */,
 				2660E5BC1063D4CF00E99A08 /* CornerFixController.h */,
@@ -134,6 +234,8 @@
 				2660E5E61063D4CF00E99A08 /* tiffThumb.h */,
 				267B260A12A415E100CEAF29 /* thumbnailWrapper.h */,
 				267B260B12A415E100CEAF29 /* thumbnailWrapper.mm */,
+				89471B6F192D42CB0065B6A4 /* CornerFixFile.h */,
+				89471B70192D42CB0065B6A4 /* CornerFixFile.m */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -159,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* CornerFix.app */,
+				89471B20192D016C0065B6A4 /* CornerFixCL */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,10 +279,12 @@
 		29B97314FDCFA39411CA2CEA /* CornerFix */ = {
 			isa = PBXGroup;
 			children = (
+				89471B54192D27C80065B6A4 /* ArgumentParser.xcodeproj */,
 				893618F4192BF05F003E5A18 /* libCornerFix.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* src */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				89471B22192D016C0065B6A4 /* CornerFixCL */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -234,9 +339,52 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		89471B22192D016C0065B6A4 /* CornerFixCL */ = {
+			isa = PBXGroup;
+			children = (
+				89471B23192D016C0065B6A4 /* main.c */,
+				89471B25192D016C0065B6A4 /* CornerFixCL.1 */,
+				89471B45192D09160065B6A4 /* CornerFixManager.h */,
+				89471B46192D09160065B6A4 /* CornerFixManager.mm */,
+			);
+			path = CornerFixCL;
+			sourceTree = "<group>";
+		};
+		89471B55192D27C80065B6A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89471B5E192D27C90065B6A4 /* desc */,
+				89471B60192D27C90065B6A4 /* long-desc */,
+				89471B62192D27C90065B6A4 /* spiffy */,
+				89471B64192D27C90065B6A4 /* ArgumentParser-Dynamic.dylib */,
+				89471B66192D27C90065B6A4 /* ArgumentParserTests.octest */,
+				89471B68192D27C90065B6A4 /* libArgumentParser-Static.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		89471B1F192D016C0065B6A4 /* CornerFixCL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89471B27192D016C0065B6A4 /* Build configuration list for PBXNativeTarget "CornerFixCL" */;
+			buildPhases = (
+				89471B1C192D016C0065B6A4 /* Sources */,
+				89471B1D192D016C0065B6A4 /* Frameworks */,
+				89471B1E192D016C0065B6A4 /* Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89471B6A192D27E10065B6A4 /* PBXTargetDependency */,
+				89471B42192D020C0065B6A4 /* PBXTargetDependency */,
+			);
+			name = CornerFixCL;
+			productName = CornerFixCL;
+			productReference = 89471B20192D016C0065B6A4 /* CornerFixCL */;
+			productType = "com.apple.product-type.tool";
+		};
 		8D1107260486CEB800E47090 /* CornerFixApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "CornerFixApp" */;
@@ -279,6 +427,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 89471B55192D27C80065B6A4 /* Products */;
+					ProjectRef = 89471B54192D27C80065B6A4 /* ArgumentParser.xcodeproj */;
+				},
+				{
 					ProductGroup = 893618F5192BF05F003E5A18 /* Products */;
 					ProjectRef = 893618F4192BF05F003E5A18 /* libCornerFix.xcodeproj */;
 				},
@@ -286,6 +438,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* CornerFixApp */,
+				89471B1F192D016C0065B6A4 /* CornerFixCL */,
 			);
 		};
 /* End PBXProject section */
@@ -296,6 +449,48 @@
 			fileType = "compiled.mach-o.dylib";
 			path = libCornerFix.dylib;
 			remoteRef = 893618F9192BF05F003E5A18 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		89471B5E192D27C90065B6A4 /* desc */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = desc;
+			remoteRef = 89471B5D192D27C90065B6A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		89471B60192D27C90065B6A4 /* long-desc */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "long-desc";
+			remoteRef = 89471B5F192D27C90065B6A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		89471B62192D27C90065B6A4 /* spiffy */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = spiffy;
+			remoteRef = 89471B61192D27C90065B6A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		89471B64192D27C90065B6A4 /* ArgumentParser-Dynamic.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = "ArgumentParser-Dynamic.dylib";
+			remoteRef = 89471B63192D27C90065B6A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		89471B66192D27C90065B6A4 /* ArgumentParserTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ArgumentParserTests.octest;
+			remoteRef = 89471B65192D27C90065B6A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		89471B68192D27C90065B6A4 /* libArgumentParser-Static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libArgumentParser-Static.a";
+			remoteRef = 89471B67192D27C90065B6A4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		89F7AD81192C492400B83C33 /* libstaticLib.a */ = {
@@ -332,6 +527,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		89471B1C192D016C0065B6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89471B47192D09160065B6A4 /* CornerFixManager.mm in Sources */,
+				89471B6E192D3ADC0065B6A4 /* ImageProcessor.mm in Sources */,
+				89471B71192D42CB0065B6A4 /* CornerFixFile.m in Sources */,
+				89471B24192D016C0065B6A4 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072C0486CEB800E47090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,6 +557,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		89471B42192D020C0065B6A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = staticLib;
+			targetProxy = 89471B41192D020C0065B6A4 /* PBXContainerItemProxy */;
+		};
+		89471B6A192D27E10065B6A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ArgumentParser-Static";
+			targetProxy = 89471B69192D27E10065B6A4 /* PBXContainerItemProxy */;
+		};
 		897AA779192C4A90002F0F6D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = staticLib;
@@ -386,11 +602,79 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		89471B28192D016C0065B6A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GENERATE_MASTER_OBJECT_FILE = NO;
+				HEADER_SEARCH_PATHS = (
+					"XMP-SDK/public/include",
+					../libCornerFix,
+					../lib/ArgumentParser/ArgumentParser,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		89471B29192D016C0065B6A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GENERATE_MASTER_OBJECT_FILE = NO;
+				HEADER_SEARCH_PATHS = (
+					"XMP-SDK/public/include",
+					../libCornerFix,
+					../lib/ArgumentParser/ArgumentParser,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
 		89BCB938192BCFEB00C5EB28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
@@ -405,6 +689,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
@@ -463,6 +749,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
@@ -476,6 +763,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
@@ -497,6 +786,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		89471B27192D016C0065B6A4 /* Build configuration list for PBXNativeTarget "CornerFixCL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89471B28192D016C0065B6A4 /* Release */,
+				89471B29192D016C0065B6A4 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "CornerFixApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

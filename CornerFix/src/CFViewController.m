@@ -75,7 +75,7 @@
 
 
 
-- (float)splitView:(NSSplitView *)sender constrainSplitPosition:(float)proposedPosition ofSubviewAt:(int)offset
+- (CGFloat)splitView:(NSSplitView *)sender constrainSplitPosition:(CGFloat)proposedPosition ofSubviewAt:(NSInteger) __unused offset
 {
 	splitFactor = (proposedPosition+[sender dividerThickness]/2)/((float) [sender frame].size.width);
 //	NSLog([NSString stringWithFormat:@"constrainSplitPosition %f, %f, splitFactor %f", proposedPosition, [sender dividerThickness], splitFactor]);
@@ -85,7 +85,7 @@
 	
 
 
-- (float)splitView:(NSSplitView *)sender constrainMinCoordinate:(float)proposedMin ofSubviewAt:(int)offset
+- (CGFloat)splitView:(NSSplitView *) __unused sender constrainMinCoordinate:(CGFloat)proposedMin ofSubviewAt:(NSInteger) offset
 {
 //	NSLog([NSString stringWithFormat:@"constrainMinCoordinate %i:%f", offset, lhsSide]);
 	if (offset == 0) {
@@ -96,7 +96,7 @@
 	}
 }
 
-- (float)splitView:(NSSplitView *)sender constrainMaxCoordinate:(float)proposedMax ofSubviewAt:(int)offset
+- (CGFloat)splitView:(NSSplitView *)sender constrainMaxCoordinate:(CGFloat)proposedMax ofSubviewAt:(NSInteger)offset
 {
 //	NSLog([NSString stringWithFormat:@"constrainMaxCoordinate %i:%f", offset, rhsSide]);
 	if (offset == 0) {

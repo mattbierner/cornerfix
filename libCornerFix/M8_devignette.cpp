@@ -1165,7 +1165,6 @@ void M8_devignette::OutputProfile(FILE *stream)
 	}
 
 	fprintf(stream, "end\n");
-
 }
 
 void M8_devignette::ReadEquationLine(FILE *stream, uint32 segmentSel)

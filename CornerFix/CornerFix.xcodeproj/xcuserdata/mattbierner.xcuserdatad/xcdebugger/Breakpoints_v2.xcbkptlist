@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/CornerFixController.mm"
-            timestampString = "422315290.752138"
+            timestampString = "422385757.172489"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "889"
-            endingLineNumber = "889"
+            startingLineNumber = "840"
+            endingLineNumber = "840"
             landmarkName = "-openProfile:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../libCornerFix/M8_devignette.cpp"
-            timestampString = "422335799.769737"
+            timestampString = "422395003.175775"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1214"
-            endingLineNumber = "1214"
+            startingLineNumber = "1213"
+            endingLineNumber = "1213"
             landmarkName = "M8_devignette::ReadProfile(FILE *stream)"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../libCornerFix/M8_devignette.cpp"
-            timestampString = "422335799.769737"
+            timestampString = "422395003.175775"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1222"
-            endingLineNumber = "1222"
+            startingLineNumber = "1221"
+            endingLineNumber = "1221"
             landmarkName = "M8_devignette::ReadProfile(FILE *stream)"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../libCornerFix/dng_win_glue.cpp"
-            timestampString = "422337418.672302"
+            timestampString = "422393054.867158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "382"
-            endingLineNumber = "382"
+            startingLineNumber = "381"
+            endingLineNumber = "381"
             landmarkName = "dng_win_glue::dng_validate ()"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../libCornerFix/dng_win_glue.cpp"
-            timestampString = "422337041.661167"
+            timestampString = "422393054.867158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "380"
-            endingLineNumber = "380"
+            startingLineNumber = "379"
+            endingLineNumber = "379"
             landmarkName = "dng_win_glue::dng_validate ()"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,43 +122,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../libCornerFix/dng_win_glue.cpp"
-            timestampString = "422337418.672302"
+            timestampString = "422393054.867158"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "386"
+            endingLineNumber = "386"
+            landmarkName = "dng_win_glue::dng_validate ()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../libCornerFix/dng_win_glue.cpp"
+            timestampString = "422393054.867158"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "389"
+            endingLineNumber = "389"
+            landmarkName = "dng_win_glue::dng_validate ()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../libCornerFix/dng_win_glue.cpp"
+            timestampString = "422393054.867158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "387"
             endingLineNumber = "387"
-            landmarkName = "dng_win_glue::dng_validate ()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../libCornerFix/dng_win_glue.cpp"
-            timestampString = "422337450.797981"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "390"
-            endingLineNumber = "390"
-            landmarkName = "dng_win_glue::dng_validate ()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../libCornerFix/dng_win_glue.cpp"
-            timestampString = "422337452.605285"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "388"
-            endingLineNumber = "388"
             landmarkName = "dng_win_glue::dng_validate ()"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/CornerFixController.mm"
-            timestampString = "422337805.564836"
+            timestampString = "422385757.172489"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "535"
-            endingLineNumber = "535"
+            startingLineNumber = "488"
+            endingLineNumber = "488"
             landmarkName = "-RunWorkerCompleted:"
             landmarkType = "5">
          </BreakpointContent>
@@ -368,6 +368,130 @@
             startingLineNumber = "664"
             endingLineNumber = "664"
             landmarkName = "dng_makernotes::DumpMakerNotes()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CornerFixCL/main.c"
+            timestampString = "422390261.050751"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "main()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CornerFixCL/main.c"
+            timestampString = "422390261.808962"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "main()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "CornerFixCL"
+                  urlString = "file:///Users/mattbierner/Projects/cornerfix/CornerFix/CornerFixCL/main.c"
+                  timestampString = "422390619.152789"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "913">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__main_block_invoke_3"
+                  moduleName = "CornerFixCL"
+                  urlString = "file:///Users/mattbierner/Projects/cornerfix/CornerFix/CornerFixCL/main.c"
+                  timestampString = "422390619.153103"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__main_block_invoke_4"
+                  moduleName = "CornerFixCL"
+                  urlString = "file:///Users/mattbierner/Projects/cornerfix/CornerFix/CornerFixCL/main.c"
+                  timestampString = "422390619.153343"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../libCornerFix/dng_win_glue.cpp"
+            timestampString = "422393054.867158"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
+            landmarkName = "dng_win_glue::saveCPFFile(NSString *file)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../libCornerFix/dng_win_glue.cpp"
+            timestampString = "422393054.867158"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "791"
+            endingLineNumber = "791"
+            landmarkName = "dng_win_glue::dng_validate ()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../libCornerFix/dng_win_glue.cpp"
+            timestampString = "422392583.90627"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
+            landmarkName = "dng_win_glue::resetCPF()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

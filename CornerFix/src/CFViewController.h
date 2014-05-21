@@ -42,14 +42,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-#if MAC_OS_X_VERSION_MIN_REQUIRED > MAC_OS_X_VERSION_10_5
 @interface CFViewController : NSObject <NSSplitViewDelegate> {
-#else
-@interface CFViewController : NSObject {
-#endif
-	
 	float splitFactor;
-
 }
 
 
