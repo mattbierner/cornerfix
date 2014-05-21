@@ -1,0 +1,3 @@
+[submodule "lib/ArgumentParser"]
+	path = lib/ArgumentParser
+	url = https://github.com/NSError/ArgumentParser.git
