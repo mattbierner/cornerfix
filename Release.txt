@@ -1,0 +1,537 @@
+0.9.0.2: 
+
+Initial release
+
+_________________
+
+0.9.0.2a: 
+
+Updated documentation
+
+_________________
+
+0.9.0.2b: 
+
+Updated documentation
+
+_________________
+
+
+0.9.0.3
+
+1. Bug fix for situation where data from previous profile generation commands
+could bias current profile genration, leading to an inaccurate profile. This
+only impacted in situations when multiple profiles were generated from different
+images in one session
+
+2. Bug fix for Illuminant compensation on/off not always working
+
+3. Updated documentation
+
+_________________
+
+
+0.9.0.4
+
+1. Improved decompression/recompression code to reduce the prevalence of "rainbow
+circles" when correcting large flat area of blue - e.g., the sky.
+
+
+_________________
+
+
+0.9.0.5
+
+1. Workflow improvements - batch mode file correction and profile creation;
+smart file name suggestions on save; CornerFix now separately tracks directories
+for image and profile files, making it easier to work through files quickly
+
+2. Image adjustments - Chroma and Luminance correction can now be adjusted
+separately, and anti-aliasing strength is user controlable - an anti-aliasing 
+strength of 0 is the same as 0.9.0.2 and 0.9.0.3, while a setting of 1 is the 
+same as 0.9.0.4
+
+3. Faster operation - optimized code means that devignetting is now 3-4 times 
+faster
+
+4. Enhanced documentation
+
+Note that 0.9.0.5 is still an "8-bit" version, and so the concentric/rainbow 
+circles artifacts can still emerge. A future version will support "16-bit" 
+operation
+
+
+
+_________________
+
+
+0.9.0.6
+
+1. More workflow improvements - options are now sticky between sessions
+
+2. DNG file data - Both the "Software" tag and the XMP "CreatorTool" tag
+are updated to show CornerFix's version number 
+
+3. Lens profiles also show the CornerFix version number
+
+
+_________________
+
+
+0.9.1.0
+
+1. "16-bit" operation. Note this is incompatible with Phase One Capture. C1 
+users should set the "Enable Level Compression" option.
+
+2. Minor fixes to the user interface
+
+_________________
+
+
+0.9.1.0 for the Mac
+
+1. Mac port of the original Windows code
+
+
+_________________
+
+
+0.9.1.1
+
+1. Mac: Fix for a bug which resulted in an error messages when overwriting an image file
+
+
+_________________
+
+
+0.9.1.2
+
+1. Mac: DMR2M8 version of CornerFix
+
+
+
+_________________
+
+
+0.9.1.3
+
+1. Mac: Replace spinner with bar
+
+2. Mac: Make the behavior of the splitter window more user friendly
+
+3. Mac: Allow the use of thumbnails for display rather than rendering the whole image - 
+faster, and displays non-supported file formats
+
+4. Mac DMR: Add the ability to selectively overwrite the camera name in the DMR2M8 derivative,
+so allowing the use of plist hacks
+
+5. Win: Enhanced error handling
+
+6. Win: Modified to use common code
+
+
+
+
+_________________
+
+
+0.9.1.4
+
+1. Mac: Fix a occasional problem when processing files with non-ASCII characters in the file name, e.g., 
+some European accented characters. 
+
+
+
+_________________
+
+
+0.9.1.5
+
+1. <Not publicly released> 
+
+
+_________________
+
+
+0.9.1.6
+
+1. All Platforms: Add MakerNotes decoding, and options to write the decoding
+to EXIF
+
+2. Win: Fix a bug that could result in preferences not being saved to the registry, and so not being
+"sticky". This occurs only under certain security scenarios and certain patch levels
+
+3. Mac: Fix a bug that could result in changes to preferences not being effecive 
+until a new file was opened
+
+4. Mac: Fix a bug that could result in the thumbnail from the previous file being displayed when a
+new file was opened immediately after a file save
+
+
+
+_________________
+
+
+0.9.1.7
+
+1. All Platforms: Add the ability to decode the M8 module revision numbers
+
+2. All Platforms: Add the ability to select whether to use the Leica g-stop or the CornerFix
+calculated aperture to update the EXIF/XMP data
+
+3. All Platforms: Fix a bug that could result in larger than necessary files being written
+during batch operations
+
+4. Mac: Fix a (another) bug that could result in changes to preferences not being effecive 
+until a new file was opened
+
+
+
+
+_________________
+
+
+0.9.1.8
+
+1. All Platforms: Ability to write non-level compressed files that Capture One V4 can read
+
+2. All Platforms: Added a new application icon courtesy of Carlitus (Carles Carbonell Bernado)'s
+KDE icon set
+
+
+
+
+_________________
+
+
+0.9.1.9
+
+1. Mac Platforms: Added a fix that allows PowerPc Macs to write Capture One V4 compatible files
+
+
+
+
+_________________
+
+
+1.0.0.0
+
+1. All Platforms: Add MakerNote decoding for Summilux-M 21mm f/1.4, Summilux-M 24mm f/1.4, 
+Noctilux 50mm f/0.95 and Elmar-M 24mm f/3.8
+
+2. Mac Platforms: Fixed some minor meory leaks
+
+3. Windows Platorms: Updated to VC 2008 and converted to full Vista application with UAC support
+
+
+
+_________________
+
+
+1.1.0.0
+
+1. All Platforms: Add MakerNote decoding for Elmar-M 18mm f/3.8 ASPH
+
+2. Windows Platorms: Changes to support Windows 7
+
+
+
+
+_________________
+
+
+1.1.0.1
+
+1. Mac Platforms: Fix a problem with OS X 10.5.7 where output to the logging window
+might not occur immediately
+
+2. Windows Platorms: Fix a bug that could cause either "Bad parameter" or "Security"
+exceptions in V1.1.0.0
+
+3. Windows Platorms: Enhanced exception handling under Vista and Windows 7
+
+4. Windows Platorms: Enhanced color management for displayed image previews
+
+
+
+
+_________________
+
+
+1.1.1.0
+
+1. All Platforms: Optimized for Leica M9
+
+2. Mac Platforms: Upgrade to XCode 3.2 and Snow Leopard libraries. Note that CornerFix
+is still full Tiger and Leopard compatible.
+
+
+
+_________________
+
+
+1.2.0.0
+
+1. All Platforms: Futher optimised for the M9; enhanced black level handling
+and new "Bidirectional Correction" option to improve image quality
+
+
+
+_________________
+
+
+1.3.0.0
+
+1. All Platforms: Further optimised for the M9; addition of compensation for variations
+in optical centering that resulted in "red to the left" images
+
+2. All Platforms: upgraded to DNG version 1.3
+
+3. All Platforms: multithreading support for long image processing tasks
+
+4. Mac Platform: fixed a bug that could result in a crash while executing
+batch conversions.
+
+
+
+
+_________________
+
+
+1.3.0.1
+
+1. All Platforms: Fixed a bug that could result in invalid profiles being generated
+if "Multiple Equation" mode was selected.
+
+
+
+_________________
+
+
+1.3.0.2
+
+1. All Platforms: Substantially improved correction for extreme wide-angle lenses
+on camera with full-frame sensors
+
+
+
+_________________
+
+
+1.3.0.3
+
+1. All Platforms: Enhanced correction for extreme wide-angle lenses
+on camera with full-frame sensors by enhancing the optical center
+finding logic, and increasing degrees of freedom for the 
+correction computations
+
+2. Windows Platforms: Fixed a code regression to the bug causing "Bad parameter" 
+or "Security" exceptions originally fixed in V1.1.0.1
+
+
+
+_________________
+
+
+1.3.0.4
+
+1. All Platforms: Fixed a bug that could result in the color temperature of
+the converted image changing from the original - aka a uniform color cast 
+being created over the entire image
+
+2. All Platforms: Added the ability to read a subset of the M9 MakerNotes - 
+the lens ID and guestimated aperture
+
+
+_________________
+
+
+1.3.0.5
+
+1. All Platforms: Fixed a bug that could result problems - either a black edge
+around the image, or a crash - with Canon 5DII images
+
+
+
+_________________
+
+
+1.3.0.6
+
+1. All Platforms: Full support for the Leica S2
+
+
+
+_________________
+
+
+1.3.0.7
+
+1. All Platforms: Fix for an issue that could result in images that had previously
+been imported into Lightroom, and then subsequently corrected using CornerFix, 
+displaying as "Damaged" in Lightroom when subsequently re-imported
+
+
+
+_________________
+
+
+1.3.0.8
+
+1. All Platforms: Fix for S2 images not being recognised as a result of Leica
+changing the UniquecameraId in V1.0.0.16 of the S2 firmware
+
+
+
+_________________
+
+
+1.3.0.9
+
+1. All Platforms: Support for Sony NEX-3 and NEX-5 cameras
+
+
+
+
+_________________
+
+
+1.4.0.0
+
+1. All Platforms: Changed to support cameras by characteristic rather than
+model number
+
+2. All Platforms: Help linkage added
+
+
+
+_________________
+
+
+1.4.0.1
+
+1. All Platforms: DNG format warnings enhanced to offer suggestions on how to
+configure the DNG converter.
+
+
+
+_________________
+
+
+1.4.0.2
+
+1. Mac Platform: Fix a bug that could result in a message box with "Alert"
+but no other information.
+
+
+
+_________________
+
+
+1.4.0.3
+
+1. All Platforms: Fix an issue that could result in large embedded thumbnails if
+the original DNG file had multiple preview images.
+
+
+
+_________________
+
+
+1.4.1.0
+
+1. All Platforms: Fix an issue that could result in an "Unknown error" on images
+with complex 2D black levels.
+
+2. All Platforms: Improve Leica MakerNotes decoding for lenses where the frame
+select changes lens type.
+
+
+
+_________________
+
+
+1.4.1.1
+
+1. All Platforms: Improve lens recognition for Leica M9s.
+
+
+_________________
+
+
+1.4.2.0
+
+1. Mac Platform: OS X 10.7 Lion compatibility
+
+2. All Platforms: Additional lens recognition for Leica M9s.
+
+3. All Platforms: Fix for an issue where if a image had been imported
+by Lightroom before being processed by CornerFix, Lightroom would incorrectly
+display a cached thumbnail from the pre-CornerFix version of the image
+
+
+
+
+
+
+_________________
+
+
+1.4.2.1
+
+1. Mac Platform: PowerPC processors no longer supported. Only X86 architectures 
+
+are now supported.
+
+2. All Platforms: Fix for an issue that could result a faint pattern emerging 
+
+when using high levels of highlight recovery on LinearRaw encoded images
+
+
+
+_________________
+
+
+1.4.2.2
+
+1. All Platforms: Added an Apple DNG compatibility option as a workaround
+for a bug in OS X's DNG reader.
+
+
+
+_________________
+
+
+1.4.2.3
+
+1. All Platforms: Fix for an issue that could result in images from Sigma 
+DP1 Merrill cameras not displaying correctly
+
+
+_________________
+
+
+1.4.2.4
+
+1. Mac Platform: Fix for an issue that could result in DNG files not loading
+
+
+
+_________________
+
+
+1.4.2.5
+
+1. All Platforms: Fix for an issue with the Leica M Monochrom
+
+
+
+_________________
+
+
+1.4.2.6
+
+1. All Platforms: Fix for an issue with Sony Alpha A7/A7R cameras
+
+
+

@@ -1,0 +1,31 @@
+{
+    IBClasses = (
+        {
+            CLASS = DBPrefsWindowController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {imageApplyHandler = id; }; 
+            CLASS = PrefsWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                advancedPrefsView = NSView; 
+                antaliasingPrefsView = NSView; 
+                cfController = CornerFixController; 
+                compressionPrefsView = NSView; 
+                generalPrefsView = NSView; 
+                lumachromaPrefsView = NSView; 
+                makerNotesPrefsView = NSView; 
+            }; 
+            SUPERCLASS = DBPrefsWindowController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

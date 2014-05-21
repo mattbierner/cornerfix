@@ -1,0 +1,35 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                batchDocument = id; 
+                batchProfile = id; 
+                createProfile = id; 
+                imageApplyHandler = id; 
+                openDocument = id; 
+                openPreferencesWindow = id; 
+                openProfile = id; 
+                saveDocument = id; 
+                saveProfile = id; 
+            }; 
+            CLASS = CornerFixController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                correctedImage = NSImageView; 
+                mainMenu = NSMenu; 
+                originalImage = NSImageView; 
+                progress = NSProgressIndicator; 
+                progressSheet = NSWindow; 
+                sheetProgress = NSProgressIndicator; 
+                sheetStatusField = NSTextField; 
+                splitView = NSSplitView; 
+                statusField = NSTextField; 
+                viewController = CFViewController; 
+                window = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

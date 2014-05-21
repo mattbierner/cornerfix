@@ -1,0 +1,39 @@
+{
+    IBClasses = (
+        {CLASS = CFCorrect; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = CFViewController; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                batchDocument = id; 
+                batchProfile = id; 
+                createProfile = id; 
+                imageApplyHandler = id; 
+                openDocument = id; 
+                openPreferencesWindow = id; 
+                openProfile = id; 
+                saveDocument = id; 
+                saveProfile = id; 
+            }; 
+            CLASS = CornerFixController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                correctedImage = NSImageView; 
+                mainMenu = NSMenu; 
+                originalImage = NSImageView; 
+                progress = NSProgressIndicator; 
+                splitView = NSSplitView; 
+                statusField = NSTextField; 
+                viewController = CFViewController; 
+                window = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {showTextPanel = id; }; 
+            CLASS = TextController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

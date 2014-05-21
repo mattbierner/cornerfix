@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2660E5E71063D4CF00E99A08 /* CFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5BB1063D4CF00E99A08 /* CFViewController.m */; };
+		2660E5E81063D4CF00E99A08 /* CornerFixController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5BD1063D4CF00E99A08 /* CornerFixController.mm */; };
+		2660E5EA1063D4CF00E99A08 /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5C21063D4CF00E99A08 /* DBPrefsWindowController.m */; };
+		2660E5F71063D4CF00E99A08 /* GretagMacBeth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5DB1063D4CF00E99A08 /* GretagMacBeth.cpp */; };
+		2660E5F91063D4CF00E99A08 /* PanelController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5E01063D4CF00E99A08 /* PanelController.mm */; };
+		2660E5FA1063D4CF00E99A08 /* PrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5E21063D4CF00E99A08 /* PrefsWindowController.m */; };
+		2660E5FB1063D4CF00E99A08 /* ThumbNSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5E41063D4CF00E99A08 /* ThumbNSImage.m */; };
+		2660E5FC1063D4CF00E99A08 /* tiffThumb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5E51063D4CF00E99A08 /* tiffThumb.cpp */; };
+		2660E6D71063D58F00E99A08 /* Anti-Alias.png in Resources */ = {isa = PBXBuildFile; fileRef = 2660E6C31063D58F00E99A08 /* Anti-Alias.png */; };
+		2660E6D81063D58F00E99A08 /* Color.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 2660E6C41063D58F00E99A08 /* Color.tiff */; };
+		2660E6D91063D58F00E99A08 /* Compression.png in Resources */ = {isa = PBXBuildFile; fileRef = 2660E6C51063D58F00E99A08 /* Compression.png */; };
+		2660E6DA1063D58F00E99A08 /* CornerFix.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2660E6C61063D58F00E99A08 /* CornerFix.icns */; };
+		2660E6DF1063D58F00E99A08 /* General.png in Resources */ = {isa = PBXBuildFile; fileRef = 2660E6D01063D58F00E99A08 /* General.png */; };
+		2660E6E11063D58F00E99A08 /* MakerNotes.png in Resources */ = {isa = PBXBuildFile; fileRef = 2660E6D21063D58F00E99A08 /* MakerNotes.png */; };
+		2660E6E21063D58F00E99A08 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2660E6D31063D58F00E99A08 /* Preferences.nib */; };
+		2660E6E31063D58F00E99A08 /* Profile Creation.png in Resources */ = {isa = PBXBuildFile; fileRef = 2660E6D41063D58F00E99A08 /* Profile Creation.png */; };
+		2660E6E41063D58F00E99A08 /* ProgressSheet.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2660E6D51063D58F00E99A08 /* ProgressSheet.nib */; };
+		2660E6E51063D58F00E99A08 /* TextPanel.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2660E6D61063D58F00E99A08 /* TextPanel.nib */; };
+		267B260C12A415E100CEAF29 /* thumbnailWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 267B260B12A415E100CEAF29 /* thumbnailWrapper.mm */; };
+		897AA77D192C4FDD002F0F6D /* InfoPlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 897AA77C192C4FDD002F0F6D /* InfoPlist.txt */; };
+		897AA784192C5049002F0F6D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 897AA77E192C5049002F0F6D /* Credits.rtf */; };
+		897AA785192C5049002F0F6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 897AA780192C5049002F0F6D /* InfoPlist.strings */; };
+		897AA786192C5049002F0F6D /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 897AA782192C5049002F0F6D /* MainMenu.nib */; };
+		89F7AD83192C495200B83C33 /* staticLib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7AD81192C492400B83C33 /* staticLib.dylib */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		893618F9192BF05F003E5A18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 893618F4192BF05F003E5A18 /* libCornerFix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 89BCB950192BD07800C5EB28;
+			remoteInfo = CornerFix;
+		};
+		897AA778192C4A90002F0F6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 893618F4192BF05F003E5A18 /* libCornerFix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 89F7AD1E192C0C3600B83C33;
+			remoteInfo = staticLib;
+		};
+		89F7AD80192C492400B83C33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 893618F4192BF05F003E5A18 /* libCornerFix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 89F7AD1F192C0C3600B83C33;
+			remoteInfo = staticLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2660E5BA1063D4CF00E99A08 /* CFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFViewController.h; path = src/CFViewController.h; sourceTree = "<group>"; };
+		2660E5BB1063D4CF00E99A08 /* CFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFViewController.m; path = src/CFViewController.m; sourceTree = "<group>"; };
+		2660E5BC1063D4CF00E99A08 /* CornerFixController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CornerFixController.h; path = src/CornerFixController.h; sourceTree = "<group>"; };
+		2660E5BD1063D4CF00E99A08 /* CornerFixController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CornerFixController.mm; path = src/CornerFixController.mm; sourceTree = "<group>"; };
+		2660E5C01063D4CF00E99A08 /* CornerFixVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CornerFixVersion.h; path = src/CornerFixVersion.h; sourceTree = "<group>"; };
+		2660E5C11063D4CF00E99A08 /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBPrefsWindowController.h; path = src/DBPrefsWindowController.h; sourceTree = "<group>"; };
+		2660E5C21063D4CF00E99A08 /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBPrefsWindowController.m; path = src/DBPrefsWindowController.m; sourceTree = "<group>"; };
+		2660E5DB1063D4CF00E99A08 /* GretagMacBeth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GretagMacBeth.cpp; path = src/GretagMacBeth.cpp; sourceTree = "<group>"; };
+		2660E5DC1063D4CF00E99A08 /* GretagMacBeth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GretagMacBeth.h; path = src/GretagMacBeth.h; sourceTree = "<group>"; };
+		2660E5DF1063D4CF00E99A08 /* PanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PanelController.h; path = src/PanelController.h; sourceTree = "<group>"; };
+		2660E5E01063D4CF00E99A08 /* PanelController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PanelController.mm; path = src/PanelController.mm; sourceTree = "<group>"; };
+		2660E5E11063D4CF00E99A08 /* PrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefsWindowController.h; path = src/PrefsWindowController.h; sourceTree = "<group>"; };
+		2660E5E21063D4CF00E99A08 /* PrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrefsWindowController.m; path = src/PrefsWindowController.m; sourceTree = "<group>"; };
+		2660E5E31063D4CF00E99A08 /* ThumbNSImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThumbNSImage.h; path = src/ThumbNSImage.h; sourceTree = "<group>"; };
+		2660E5E41063D4CF00E99A08 /* ThumbNSImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThumbNSImage.m; path = src/ThumbNSImage.m; sourceTree = "<group>"; };
+		2660E5E51063D4CF00E99A08 /* tiffThumb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tiffThumb.cpp; path = src/tiffThumb.cpp; sourceTree = "<group>"; };
+		2660E5E61063D4CF00E99A08 /* tiffThumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tiffThumb.h; path = src/tiffThumb.h; sourceTree = "<group>"; };
+		2660E6C31063D58F00E99A08 /* Anti-Alias.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Anti-Alias.png"; path = "resources/Anti-Alias.png"; sourceTree = "<group>"; };
+		2660E6C41063D58F00E99A08 /* Color.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Color.tiff; path = resources/Color.tiff; sourceTree = "<group>"; };
+		2660E6C51063D58F00E99A08 /* Compression.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Compression.png; path = resources/Compression.png; sourceTree = "<group>"; };
+		2660E6C61063D58F00E99A08 /* CornerFix.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CornerFix.icns; path = resources/CornerFix.icns; sourceTree = "<group>"; };
+		2660E6D01063D58F00E99A08 /* General.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = General.png; path = resources/General.png; sourceTree = "<group>"; };
+		2660E6D21063D58F00E99A08 /* MakerNotes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MakerNotes.png; path = resources/MakerNotes.png; sourceTree = "<group>"; };
+		2660E6D31063D58F00E99A08 /* Preferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Preferences.nib; path = resources/Preferences.nib; sourceTree = "<group>"; };
+		2660E6D41063D58F00E99A08 /* Profile Creation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Profile Creation.png"; path = "resources/Profile Creation.png"; sourceTree = "<group>"; };
+		2660E6D51063D58F00E99A08 /* ProgressSheet.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ProgressSheet.nib; path = resources/ProgressSheet.nib; sourceTree = "<group>"; };
+		2660E6D61063D58F00E99A08 /* TextPanel.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = TextPanel.nib; path = resources/TextPanel.nib; sourceTree = "<group>"; };
+		2660E7581063D9FD00E99A08 /* CornerFix-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CornerFix-Info.plist"; sourceTree = "<group>"; };
+		267B260A12A415E100CEAF29 /* thumbnailWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = thumbnailWrapper.h; path = src/thumbnailWrapper.h; sourceTree = "<group>"; };
+		267B260B12A415E100CEAF29 /* thumbnailWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = thumbnailWrapper.mm; path = src/thumbnailWrapper.mm; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		893618F4192BF05F003E5A18 /* libCornerFix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libCornerFix.xcodeproj; path = ../libCornerFix/libCornerFix.xcodeproj; sourceTree = "<group>"; };
+		897AA77C192C4FDD002F0F6D /* InfoPlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = InfoPlist.txt; path = resources/InfoPlist.txt; sourceTree = "<group>"; };
+		897AA77F192C5049002F0F6D /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = Credits.rtf; sourceTree = "<group>"; };
+		897AA781192C5049002F0F6D /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = InfoPlist.strings; sourceTree = "<group>"; };
+		897AA783192C5049002F0F6D /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = MainMenu.nib; sourceTree = "<group>"; };
+		897AA787192C5083002F0F6D /* CornerFix_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CornerFix_Prefix.pch; sourceTree = "<group>"; };
+		89BCB9A4192BD14800C5EB28 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		8D1107320486CEB800E47090 /* CornerFix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CornerFix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89F7AD83192C495200B83C33 /* staticLib.dylib in Frameworks */,
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2660E5BA1063D4CF00E99A08 /* CFViewController.h */,
+				2660E5BB1063D4CF00E99A08 /* CFViewController.m */,
+				2660E5BC1063D4CF00E99A08 /* CornerFixController.h */,
+				2660E5BD1063D4CF00E99A08 /* CornerFixController.mm */,
+				2660E5C01063D4CF00E99A08 /* CornerFixVersion.h */,
+				2660E5C11063D4CF00E99A08 /* DBPrefsWindowController.h */,
+				2660E5C21063D4CF00E99A08 /* DBPrefsWindowController.m */,
+				2660E5DB1063D4CF00E99A08 /* GretagMacBeth.cpp */,
+				2660E5DC1063D4CF00E99A08 /* GretagMacBeth.h */,
+				2660E5DF1063D4CF00E99A08 /* PanelController.h */,
+				2660E5E01063D4CF00E99A08 /* PanelController.mm */,
+				2660E5E11063D4CF00E99A08 /* PrefsWindowController.h */,
+				2660E5E21063D4CF00E99A08 /* PrefsWindowController.m */,
+				2660E5E31063D4CF00E99A08 /* ThumbNSImage.h */,
+				2660E5E41063D4CF00E99A08 /* ThumbNSImage.m */,
+				2660E5E51063D4CF00E99A08 /* tiffThumb.cpp */,
+				2660E5E61063D4CF00E99A08 /* tiffThumb.h */,
+				267B260A12A415E100CEAF29 /* thumbnailWrapper.h */,
+				267B260B12A415E100CEAF29 /* thumbnailWrapper.mm */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* CornerFix.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2660E6C71063D58F00E99A08 /* English.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				897AA77E192C5049002F0F6D /* Credits.rtf */,
+				897AA780192C5049002F0F6D /* InfoPlist.strings */,
+				897AA782192C5049002F0F6D /* MainMenu.nib */,
+			);
+			path = English.lproj;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CornerFix */ = {
+			isa = PBXGroup;
+			children = (
+				893618F4192BF05F003E5A18 /* libCornerFix.xcodeproj */,
+				080E96DDFE201D6D7F000001 /* src */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CornerFix;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				897AA787192C5083002F0F6D /* CornerFix_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				897AA77C192C4FDD002F0F6D /* InfoPlist.txt */,
+				2660E7581063D9FD00E99A08 /* CornerFix-Info.plist */,
+				2660E6C31063D58F00E99A08 /* Anti-Alias.png */,
+				2660E6C41063D58F00E99A08 /* Color.tiff */,
+				2660E6C51063D58F00E99A08 /* Compression.png */,
+				2660E6C61063D58F00E99A08 /* CornerFix.icns */,
+				2660E6C71063D58F00E99A08 /* English.lproj */,
+				2660E6D01063D58F00E99A08 /* General.png */,
+				2660E6D21063D58F00E99A08 /* MakerNotes.png */,
+				2660E6D31063D58F00E99A08 /* Preferences.nib */,
+				2660E6D41063D58F00E99A08 /* Profile Creation.png */,
+				2660E6D51063D58F00E99A08 /* ProgressSheet.nib */,
+				2660E6D61063D58F00E99A08 /* TextPanel.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89BCB9A4192BD14800C5EB28 /* CoreServices.framework */,
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		893618F5192BF05F003E5A18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				893618FA192BF05F003E5A18 /* libCornerFix.dylib */,
+				89F7AD81192C492400B83C33 /* staticLib.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* CornerFixApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "CornerFixApp" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				897AA779192C4A90002F0F6D /* PBXTargetDependency */,
+			);
+			name = CornerFixApp;
+			productInstallPath = "$(HOME)/Applications";
+			productName = CornerFix;
+			productReference = 8D1107320486CEB800E47090 /* CornerFix.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Sandy McGuffog";
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CornerFix" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CornerFix */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 893618F5192BF05F003E5A18 /* Products */;
+					ProjectRef = 893618F4192BF05F003E5A18 /* libCornerFix.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* CornerFixApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		893618FA192BF05F003E5A18 /* libCornerFix.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libCornerFix.dylib;
+			remoteRef = 893618F9192BF05F003E5A18 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		89F7AD81192C492400B83C33 /* staticLib.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			name = staticLib.dylib;
+			path = libstaticLib.a;
+			remoteRef = 89F7AD80192C492400B83C33 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2660E6D71063D58F00E99A08 /* Anti-Alias.png in Resources */,
+				2660E6D81063D58F00E99A08 /* Color.tiff in Resources */,
+				2660E6D91063D58F00E99A08 /* Compression.png in Resources */,
+				897AA785192C5049002F0F6D /* InfoPlist.strings in Resources */,
+				2660E6DA1063D58F00E99A08 /* CornerFix.icns in Resources */,
+				2660E6DF1063D58F00E99A08 /* General.png in Resources */,
+				2660E6E11063D58F00E99A08 /* MakerNotes.png in Resources */,
+				2660E6E21063D58F00E99A08 /* Preferences.nib in Resources */,
+				897AA784192C5049002F0F6D /* Credits.rtf in Resources */,
+				897AA786192C5049002F0F6D /* MainMenu.nib in Resources */,
+				2660E6E31063D58F00E99A08 /* Profile Creation.png in Resources */,
+				2660E6E41063D58F00E99A08 /* ProgressSheet.nib in Resources */,
+				897AA77D192C4FDD002F0F6D /* InfoPlist.txt in Resources */,
+				2660E6E51063D58F00E99A08 /* TextPanel.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				2660E5E71063D4CF00E99A08 /* CFViewController.m in Sources */,
+				2660E5E81063D4CF00E99A08 /* CornerFixController.mm in Sources */,
+				2660E5EA1063D4CF00E99A08 /* DBPrefsWindowController.m in Sources */,
+				2660E5F71063D4CF00E99A08 /* GretagMacBeth.cpp in Sources */,
+				2660E5F91063D4CF00E99A08 /* PanelController.mm in Sources */,
+				2660E5FA1063D4CF00E99A08 /* PrefsWindowController.m in Sources */,
+				2660E5FB1063D4CF00E99A08 /* ThumbNSImage.m in Sources */,
+				2660E5FC1063D4CF00E99A08 /* tiffThumb.cpp in Sources */,
+				267B260C12A415E100CEAF29 /* thumbnailWrapper.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		897AA779192C4A90002F0F6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = staticLib;
+			targetProxy = 897AA778192C4A90002F0F6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		897AA77E192C5049002F0F6D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				897AA77F192C5049002F0F6D /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		897AA780192C5049002F0F6D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				897AA781192C5049002F0F6D /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		897AA782192C5049002F0F6D /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				897AA783192C5049002F0F6D /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		89BCB938192BCFEB00C5EB28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"qDNGValidateTarget=1",
+					"qWinOS=0",
+					"qDNGUseStdInt=1",
+					"qMacOS=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"XMP-SDK/public/include",
+					../libCornerFix,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/XMP-SDK/public/libraries/macintosh/intel_64/Release\"",
+					"\"$(SRCROOT)/XMP-SDK/public/libraries/macintosh/intel_64/Debug\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		89BCB939192BCFEB00C5EB28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CornerFix_Prefix.pch;
+				INFOPLIST_FILE = "CornerFix-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = CornerFix;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CornerFix_Prefix.pch;
+				INFOPLIST_FILE = "CornerFix-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = CornerFix;
+			};
+			name = Release;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"qDNGValidateTarget=1",
+					"qWinOS=0",
+					"qDNGUseStdInt=1",
+					"qMacOS=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"XMP-SDK/public/include",
+					../libCornerFix,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/XMP-SDK/public/libraries/macintosh/intel_64/Release\"",
+					"\"$(SRCROOT)/XMP-SDK/public/libraries/macintosh/intel_64/Debug\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "CornerFixApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4C08A954540054247B /* Release */,
+				89BCB939192BCFEB00C5EB28 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CornerFix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF5008A954540054247B /* Release */,
+				89BCB938192BCFEB00C5EB28 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
