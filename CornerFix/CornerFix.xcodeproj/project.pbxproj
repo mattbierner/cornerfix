@@ -10,7 +10,6 @@
 		2660E5E71063D4CF00E99A08 /* CFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5BB1063D4CF00E99A08 /* CFViewController.m */; };
 		2660E5E81063D4CF00E99A08 /* CornerFixController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5BD1063D4CF00E99A08 /* CornerFixController.mm */; };
 		2660E5EA1063D4CF00E99A08 /* DBPrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5C21063D4CF00E99A08 /* DBPrefsWindowController.m */; };
-		2660E5F71063D4CF00E99A08 /* GretagMacBeth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5DB1063D4CF00E99A08 /* GretagMacBeth.cpp */; };
 		2660E5F91063D4CF00E99A08 /* PanelController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5E01063D4CF00E99A08 /* PanelController.mm */; };
 		2660E5FA1063D4CF00E99A08 /* PrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5E21063D4CF00E99A08 /* PrefsWindowController.m */; };
 		2660E5FB1063D4CF00E99A08 /* ThumbNSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2660E5E41063D4CF00E99A08 /* ThumbNSImage.m */; };
@@ -30,7 +29,7 @@
 		897AA784192C5049002F0F6D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 897AA77E192C5049002F0F6D /* Credits.rtf */; };
 		897AA785192C5049002F0F6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 897AA780192C5049002F0F6D /* InfoPlist.strings */; };
 		897AA786192C5049002F0F6D /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 897AA782192C5049002F0F6D /* MainMenu.nib */; };
-		89F7AD83192C495200B83C33 /* staticLib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7AD81192C492400B83C33 /* staticLib.dylib */; };
+		89F7AD83192C495200B83C33 /* libstaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7AD81192C492400B83C33 /* libstaticLib.a */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -68,8 +67,6 @@
 		2660E5C01063D4CF00E99A08 /* CornerFixVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CornerFixVersion.h; path = src/CornerFixVersion.h; sourceTree = "<group>"; };
 		2660E5C11063D4CF00E99A08 /* DBPrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBPrefsWindowController.h; path = src/DBPrefsWindowController.h; sourceTree = "<group>"; };
 		2660E5C21063D4CF00E99A08 /* DBPrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBPrefsWindowController.m; path = src/DBPrefsWindowController.m; sourceTree = "<group>"; };
-		2660E5DB1063D4CF00E99A08 /* GretagMacBeth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GretagMacBeth.cpp; path = src/GretagMacBeth.cpp; sourceTree = "<group>"; };
-		2660E5DC1063D4CF00E99A08 /* GretagMacBeth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GretagMacBeth.h; path = src/GretagMacBeth.h; sourceTree = "<group>"; };
 		2660E5DF1063D4CF00E99A08 /* PanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PanelController.h; path = src/PanelController.h; sourceTree = "<group>"; };
 		2660E5E01063D4CF00E99A08 /* PanelController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PanelController.mm; path = src/PanelController.mm; sourceTree = "<group>"; };
 		2660E5E11063D4CF00E99A08 /* PrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefsWindowController.h; path = src/PrefsWindowController.h; sourceTree = "<group>"; };
@@ -109,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89F7AD83192C495200B83C33 /* staticLib.dylib in Frameworks */,
+				89F7AD83192C495200B83C33 /* libstaticLib.a in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,8 +124,6 @@
 				2660E5C01063D4CF00E99A08 /* CornerFixVersion.h */,
 				2660E5C11063D4CF00E99A08 /* DBPrefsWindowController.h */,
 				2660E5C21063D4CF00E99A08 /* DBPrefsWindowController.m */,
-				2660E5DB1063D4CF00E99A08 /* GretagMacBeth.cpp */,
-				2660E5DC1063D4CF00E99A08 /* GretagMacBeth.h */,
 				2660E5DF1063D4CF00E99A08 /* PanelController.h */,
 				2660E5E01063D4CF00E99A08 /* PanelController.mm */,
 				2660E5E11063D4CF00E99A08 /* PrefsWindowController.h */,
@@ -234,7 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				893618FA192BF05F003E5A18 /* libCornerFix.dylib */,
-				89F7AD81192C492400B83C33 /* staticLib.dylib */,
+				89F7AD81192C492400B83C33 /* libstaticLib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -303,10 +298,9 @@
 			remoteRef = 893618F9192BF05F003E5A18 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		89F7AD81192C492400B83C33 /* staticLib.dylib */ = {
+		89F7AD81192C492400B83C33 /* libstaticLib.a */ = {
 			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			name = staticLib.dylib;
+			fileType = archive.ar;
 			path = libstaticLib.a;
 			remoteRef = 89F7AD80192C492400B83C33 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -346,7 +340,6 @@
 				2660E5E71063D4CF00E99A08 /* CFViewController.m in Sources */,
 				2660E5E81063D4CF00E99A08 /* CornerFixController.mm in Sources */,
 				2660E5EA1063D4CF00E99A08 /* DBPrefsWindowController.m in Sources */,
-				2660E5F71063D4CF00E99A08 /* GretagMacBeth.cpp in Sources */,
 				2660E5F91063D4CF00E99A08 /* PanelController.mm in Sources */,
 				2660E5FA1063D4CF00E99A08 /* PrefsWindowController.m in Sources */,
 				2660E5FB1063D4CF00E99A08 /* ThumbNSImage.m in Sources */,
