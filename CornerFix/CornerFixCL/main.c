@@ -2,7 +2,7 @@
 
 #include "FSArguments.h"
 #include "CornerFixManager.h"
-
+#include "ImageProcessor.h"
 
 int main(int argc, const char * argv[])
 {
@@ -20,12 +20,14 @@ int main(int argc, const char * argv[])
 
     FSArgumentPackage* package = [[NSProcessInfo processInfo] fsargs_parseArgumentsWithSignatures:signatures];
 
+
+
+    CornerFixManager* manager = [[CornerFixManager alloc] init];
+        
+    NSArray* inputs = [package allObjectsForSignature:inputFile];
+    NSString* output = [package firstObjectForSignature:outputFile];
+
     if ([package booleanValueForSignature:createProfile]) {
-        CornerFixManager* manager = [[CornerFixManager alloc] init];
-        
-        NSArray* inputs = [package allObjectsForSignature:inputFile];
-        NSString* output = [package firstObjectForSignature:outputFile];
-        
         if ([inputs count] > 1) {
             BOOL isDir;
             if (![[NSFileManager defaultManager] fileExistsAtPath:output isDirectory:&isDir] || !isDir) {
@@ -37,8 +39,22 @@ int main(int argc, const char * argv[])
             [manager createProfiles:inputs ok:^{} err:^{}];
         }
         
-        
         exit(EXIT_SUCCESS);
+    } else { // convert images
+        NSString* profileFile = [package firstObjectForSignature:profile];
+        if (!profileFile || ![[NSFileManager defaultManager] fileExistsAtPath:profileFile]) {
+            exit(EXIT_FAILURE);
+        }
+        ImageProcessor* processor = [ImageProcessor processorForProfile:profileFile];
+
+         if ([inputs count] > 1) {
+            BOOL isDir;
+            if (![[NSFileManager defaultManager] fileExistsAtPath:output isDirectory:&isDir] || !isDir) {
+                exit(EXIT_FAILURE);
+            }
+        } else {
+            [processor processFiles:inputs ok:^{} err:^{}];
+        }
     }
 
     exit(EXIT_SUCCESS);

@@ -93,6 +93,13 @@
     return g;
 }
 
++ (id) processorForProfile:(NSString *)profile
+{
+    ImageProcessor* processor = [[ImageProcessor alloc] init];
+    [processor loadProfile:profile];
+    return processor;
+}
+
 - (id) init
 {
 	glue = new dng_win_glue();
@@ -431,11 +438,19 @@
 {
     if ([fileManager isReadableFileAtPath:file]) {
         glue->setImage(file);
-        validateRetVal = glue->dng_validate();
         glue->setOutputFile([CornerFixFile renameFile:file suffix:@"_CF"]);
+        validateRetVal = glue->dng_validate();
     }
 
     ok();
+}
+
+- (void) processFiles:(NSArray*)files
+    ok:(void(^)())ok
+    err:(void(^)())err
+{
+    for (NSString* file in files)
+        [self processFile:file ok:ok err:err];
 }
 
 /*
@@ -551,11 +566,7 @@
             }
             [alert release];*/
         }
-        
-        [cpfFiles release];
-        cpfFiles = [NSArray arrayWithObject:file];
-        [cpfDirectory release];
-        cpfDirectory = [[file stringByDeletingLastPathComponent] retain];
+        [self configureGlue:glue];
     }
 }
 

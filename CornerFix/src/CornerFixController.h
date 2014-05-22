@@ -44,8 +44,6 @@
 * The main app form for CornerFix for the Mac.
 */
 
-
-#import <Cocoa/Cocoa.h>
 #include "CFViewController.h"
 
 class dng_win_glue;

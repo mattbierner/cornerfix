@@ -21,7 +21,9 @@ class dng_win_glue;
 	bool sheetNotDone;
 }
 
-- (ImageProcessor*) initWithProfile:(NSString*) profile;
++ (id) processorForProfile:(NSString*)profile;
+
+- (id) init;
 
 - (void) loadProfile:(NSString*) profile;
 
@@ -31,6 +33,10 @@ class dng_win_glue;
 - (dng_win_glue*) configureGlue:(dng_win_glue*) glue;
 
 - (void) processFile:(NSString*)file
+    ok:(void(^)())ok
+    err:(void(^)())err;
+
+- (void) processFiles:(NSArray*)files
     ok:(void(^)())ok
     err:(void(^)())err;
 

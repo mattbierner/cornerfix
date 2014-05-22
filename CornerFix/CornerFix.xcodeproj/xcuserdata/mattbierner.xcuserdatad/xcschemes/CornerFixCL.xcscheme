@@ -61,6 +61,10 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "-m -i profile.dng -o profile.cfp"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-p profile.cpf -i image.dng -o image_CF.dng"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

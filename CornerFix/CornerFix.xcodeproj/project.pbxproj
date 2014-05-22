@@ -37,6 +37,7 @@
 		897AA784192C5049002F0F6D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 897AA77E192C5049002F0F6D /* Credits.rtf */; };
 		897AA785192C5049002F0F6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 897AA780192C5049002F0F6D /* InfoPlist.strings */; };
 		897AA786192C5049002F0F6D /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 897AA782192C5049002F0F6D /* MainMenu.nib */; };
+		89ADDE15192DA4D700CF0111 /* CornerFixFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 89471B70192D42CB0065B6A4 /* CornerFixFile.m */; };
 		89F7AD83192C495200B83C33 /* libstaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7AD81192C492400B83C33 /* libstaticLib.a */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -542,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89ADDE15192DA4D700CF0111 /* CornerFixFile.m in Sources */,
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				2660E5E71063D4CF00E99A08 /* CFViewController.m in Sources */,
 				2660E5E81063D4CF00E99A08 /* CornerFixController.mm in Sources */,
@@ -793,6 +795,7 @@
 				89471B29192D016C0065B6A4 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "CornerFixApp" */ = {
 			isa = XCConfigurationList;

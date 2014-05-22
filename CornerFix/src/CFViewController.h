@@ -40,8 +40,6 @@
  * It functions as a delegate. In most languages, we would subclass, but this objective-C(!)
  */
 
-#import <Cocoa/Cocoa.h>
-
 @interface CFViewController : NSObject <NSSplitViewDelegate> {
 	float splitFactor;
 }

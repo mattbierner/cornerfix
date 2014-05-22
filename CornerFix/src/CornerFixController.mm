@@ -60,14 +60,19 @@
 */
 
 #import "CornerFixController.h"
+
 #import "PrefsWindowController.h"
+#include "CornerFixVersion.h"
+#include "ThumbNSImage.h"
+#import "thumbnailWrapper.h"
+#include "CornerFixFile.h"
+
 #include "dng_local_printf.h"
 #include "dng_win_glue.h"
 #include "dng_errors.h"
-#include "CornerFixVersion.h"
-#include "ThumbNSImage.h"
+
 #include <unistd.h>
-#import "thumbnailWrapper.h"
+
 
 @implementation CornerFixController
 
@@ -224,7 +229,7 @@
 - (void) wakeupProgressSheet {
 	if (!progressSheet) {
 		//Check the ProgressSheet instance variable to make sure the custom sheet does not already exist.
-		[[NSBundle mainBundle] loadNibNamed: @"ProgressSheet" owner: self topLevelObjects: nil];
+		[NSBundle loadNibNamed: @"ProgressSheet" owner: self];
 		[progressSheet setOpaque:NO]; // YES by default
 		NSColor *semiTransparentBlue =
 			[NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.3 alpha:0.7];
@@ -295,13 +300,13 @@
 {	
    SEL theAction = [anItem action];
 	
-		if (theAction == @selector(terminate:))
+	//	if (theAction == @selector(terminate:))
 		{
 			return YES;
 		}
-		else {
-			return !disableMenu;
-		}
+		//else {
+		//	return !disableMenu;
+		//}
 }
 
 - (BOOL) prefsSignatureChanged
@@ -334,10 +339,7 @@
 }
 
 
-
 - (void)showProgressSheet
-
-	// User has asked to see the custom display. Display it.
 {
 	[self wakeupProgressSheet];	
 	
@@ -346,44 +348,12 @@
 		modalDelegate: self
 	   didEndSelector: @selector(didEndSheet:returnCode:contextInfo:)
 		  contextInfo: nil];
-	
-    // Sheet is up here.
-    // Return processing to the event loop
-
 }
 
 
 - (void)didEndSheet:(NSWindow *)sheet returnCode:(int)returnCode contextInfo:(void *)contextInfo
 {
     [sheet orderOut:self];
-}
-
-
-- (NSArray *) convertExtensions:(NSArray *) files extension: (NSString *) extension
-{
-	if (files && extension) 
-	{
-		NSMutableArray *newArray = [NSMutableArray arrayWithCapacity:[files count]];
-		for (NSString* aFile in files) {
-			[newArray addObject:[[aFile stringByDeletingPathExtension] stringByAppendingPathExtension:extension]];
-		}
-		return newArray;
-	}
-    return nil;
-}
-
-
-- (NSArray *) renameFiles:(NSArray *) files suffix: (NSString *) suffix
-{
-	if (files && suffix) 
-	{
-        NSMutableArray *newArray = [NSMutableArray arrayWithCapacity:[files count]];
-		for (NSString* aFile in files) {
-			[newArray addObject:[[[aFile stringByDeletingPathExtension] stringByAppendingString:suffix] stringByAppendingPathExtension:[aFile pathExtension]]];
-		}
-		return newArray;
-	}
-    return nil;
 }
 
 
@@ -439,7 +409,9 @@
 			readyMsg = @"Ready....";
 			break;
 	}
-	[sheetStatusField setStringValue:readyMsg];
+    
+    if (progressSheet)
+        [sheetStatusField setStringValue:readyMsg];
 }
 
 
@@ -473,7 +445,7 @@
                 validateRetVal = glue->dng_validate();
                 if (!outputFiles && batchMode && (validateRetVal == dng_error_none))
                 {
-                    glue->saveCPFFile([cpfFiles objectAtIndex:index]);;
+                    glue->saveCPFFile([cpfFiles objectAtIndex:index]);
                 }
                 
             }
@@ -552,7 +524,6 @@
 		if ((validateRetVal == CornerFix_unknown_model) || (validateRetVal == CornerFix_bad_Bayer) ||
 			(validateRetVal == CornerFix_bad_linear) || (validateRetVal == CornerFix_bad_pixel_format))
 		{
-			
 			NSAlert *alert = [[NSAlert alloc] init];
 			[alert addButtonWithTitle:@"OK"];
 			
@@ -652,9 +623,6 @@
 }
 
 
-
-
-
 - (void) runWorkerAsync:(id) __unused param
 {
 	disableMenu = YES;
@@ -674,8 +642,6 @@
 }
 
 - (void) processImages {
-	
-
 	if (glue) {
 		[self showProgressSheet];
 		[sheetStatusField setStringValue:@"Processing....."];
@@ -776,7 +742,6 @@
 }
 
 
-
 - (IBAction)openPreferencesWindow:(id) __unused sender
 {
 	[self prefsSignatureChanged];
@@ -788,7 +753,6 @@
 	[pControl showWindow:nil];
 }
 
- // User/Filesystem interactions.
 
 - (IBAction) openDocument:(id) __unused sender
 {
@@ -873,7 +837,7 @@
 		 
 		/* display the NSSavePanel */
 		[outputFiles release];
-		outputFiles = [[self renameFiles:imageFiles suffix:@"_CF" ] retain];
+		outputFiles = [[CornerFixFile renameFiles:imageFiles suffix:@"_CF" ] retain];
         
         if (imageDirectory) {
             [sp setDirectoryURL:[NSURL fileURLWithPath:imageDirectory]];
@@ -932,7 +896,7 @@
 	 {
 		 glue->setBuildCPF();
 		 [cpfFiles release];
-		 cpfFiles = [[self convertExtensions:imageFiles extension:@"cpf"] retain];
+		 cpfFiles = [[CornerFixFile convertExtensions:imageFiles extension:@"cpf"] retain];
 		 [self processImages];
 		 [self updateDisplay];
 	 }
@@ -1041,7 +1005,7 @@
 		[imageFiles release];
 		imageFiles = [filesToOpen retain];				
 		[outputFiles release];
-		outputFiles = [[self renameFiles:imageFiles suffix:@"_CF" ] retain];
+		outputFiles = [[CornerFixFile renameFiles:imageFiles suffix:@"_CF" ] retain];
 		[loadedCPFFiles release];
 		loadedCPFFiles = [cpfFiles retain];
 		cpfFiles = nil;
@@ -1075,7 +1039,7 @@
 		[outputFiles release];
 		outputFiles = nil;
 		[cpfFiles release];
-		cpfFiles = [[self convertExtensions:imageFiles extension:@"cpf" ] retain];
+		cpfFiles = [[CornerFixFile convertExtensions:imageFiles extension:@"cpf" ] retain];
 		batchMode = true;
 		[self processImages];			
     }
