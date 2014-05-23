@@ -1,11 +1,3 @@
-//
-//  CornerFixFile.h
-//  CornerFix
-//
-//  Created by Matt Bierner on 5/21/14.
-//  Copyright (c) 2014 Sandy McGuffog. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 @interface CornerFixFile : NSObject

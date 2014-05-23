@@ -1,11 +1,3 @@
-//
-//  CornerFixFile.m
-//  CornerFix
-//
-//  Created by Matt Bierner on 5/21/14.
-//  Copyright (c) 2014 Sandy McGuffog. All rights reserved.
-//
-
 #import "CornerFixFile.h"
 
 @implementation CornerFixFile

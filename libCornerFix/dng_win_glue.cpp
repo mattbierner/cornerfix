@@ -276,11 +276,7 @@ bool dng_win_glue::setCPFFile(NSString *file)
 	return retVal;
 }
 
-#if qWinOS
-bool dng_win_glue::saveCPFFile(String ^file)
-#else
 bool dng_win_glue::saveCPFFile(NSString *file)
-#endif
 {
 	bool retVal = false;
 	gDumpCPF.setFromString(file);
@@ -288,12 +284,8 @@ bool dng_win_glue::saveCPFFile(NSString *file)
 		
 		FILE *stream; 
 		
-#if qWinOS
-		fopen_s( &stream, gDumpCPF.Get (), "w" );
-#else
 		stream = fopen(gDumpCPF.Get (), "w" );
-#endif
-		
+    
 		if (stream) {
 			deVignetteInfo->OutputProfile(stream);
 			cpfState = kcpfStateSaved;
@@ -306,7 +298,6 @@ bool dng_win_glue::saveCPFFile(NSString *file)
 	gDumpCPF.Clear();
 	
 	return retVal;
-	
 }
 
 void dng_win_glue::zeroOutInfoBlacks (dng_linearization_info *info) {
@@ -332,9 +323,10 @@ void dng_win_glue::zeroOutInfoBlacks (dng_linearization_info *info) {
 	}
 }
 
-dng_error_code dng_win_glue::dng_validate ()
+dng_error_code dng_win_glue::dng_validate()
 {
-	
+    
+    
 	dng_error_code retVal = dng_error_none;
 	// Sane starting point for the thumbnail....
 	uint32 thumbMaxSize = 256;
@@ -347,7 +339,6 @@ dng_error_code dng_win_glue::dng_validate ()
 		
 		try
 		{
-			
 			dng_file_stream stream (gImageDNG.Get());
 			
 			dng_threaded_host host;

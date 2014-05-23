@@ -55,9 +55,6 @@ class dng_string_win :
 public:
 	dng_string_win(void);
 	~dng_string_win(void);
-#if qWinOS
-	void setFromString(String ^s);
-#else
+
 	void setFromString(NSString *s);
-#endif
 };

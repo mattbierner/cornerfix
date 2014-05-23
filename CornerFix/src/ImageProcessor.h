@@ -1,38 +1,26 @@
+/**
+ *
+ */
 #include <Foundation/Foundation.h>
 
 class dng_win_glue;
 
 @interface ImageProcessor : NSObject
 {
-	NSString * tempFile;
-	NSArray * loadedCPFFiles;
-	NSArray  * imageFiles;
-	NSArray * cpfFiles;
-	NSArray * outputFiles;
-	NSString * imageDirectory;
-	NSString * cpfDirectory;
-	int progressState;
-	int validateRetVal;
-	bool batchMode;	
-	dng_win_glue * glue;
-	NSFileManager * fileManager;
-	bool disableMenu;
-	long long prefsSignature;
-	bool sheetNotDone;
+	dng_win_glue* glue;
+	NSFileManager* fileManager;
 }
 
-+ (id) processorForProfile:(NSString*)profile;
++ (id) processorForProfile:(NSString*)profile
+    config:(NSUserDefaults*) config;
 
 - (id) init;
 
+- (void) loadConfiguration:(NSUserDefaults*) config;
 - (void) loadProfile:(NSString*) profile;
 
-- (void) runWorkerAsync:(id)param;
-- (void) RunWorkerCompleted:(id)param;
-
-- (dng_win_glue*) configureGlue:(dng_win_glue*) glue;
-
-- (void) processFile:(NSString*)file
+- (void) processFile:(NSString*)input
+    output:(NSString*)output
     ok:(void(^)())ok
     err:(void(^)())err;
 

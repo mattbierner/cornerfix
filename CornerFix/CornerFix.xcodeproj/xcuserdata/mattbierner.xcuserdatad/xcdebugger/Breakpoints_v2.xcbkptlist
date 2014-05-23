@@ -74,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../libCornerFix/dng_win_glue.cpp"
-            timestampString = "422393054.867158"
+            timestampString = "422424971.952325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "381"
-            endingLineNumber = "381"
-            landmarkName = "dng_win_glue::dng_validate ()"
+            startingLineNumber = "372"
+            endingLineNumber = "372"
+            landmarkName = "dng_win_glue::dng_validate()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -106,12 +106,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../libCornerFix/dng_win_glue.cpp"
-            timestampString = "422393054.867158"
+            timestampString = "422424971.952325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "379"
-            endingLineNumber = "379"
-            landmarkName = "dng_win_glue::dng_validate ()"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
+            landmarkName = "dng_win_glue::dng_validate()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -122,12 +122,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../libCornerFix/dng_win_glue.cpp"
-            timestampString = "422393054.867158"
+            timestampString = "422424971.952325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "386"
-            endingLineNumber = "386"
-            landmarkName = "dng_win_glue::dng_validate ()"
+            startingLineNumber = "377"
+            endingLineNumber = "377"
+            landmarkName = "dng_win_glue::dng_validate()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -138,12 +138,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../libCornerFix/dng_win_glue.cpp"
-            timestampString = "422393054.867158"
+            timestampString = "422424971.952325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "389"
-            endingLineNumber = "389"
-            landmarkName = "dng_win_glue::dng_validate ()"
+            startingLineNumber = "380"
+            endingLineNumber = "380"
+            landmarkName = "dng_win_glue::dng_validate()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -154,12 +154,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../libCornerFix/dng_win_glue.cpp"
-            timestampString = "422393054.867158"
+            timestampString = "422424971.952325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "387"
-            endingLineNumber = "387"
-            landmarkName = "dng_win_glue::dng_validate ()"
+            startingLineNumber = "378"
+            endingLineNumber = "378"
+            landmarkName = "dng_win_glue::dng_validate()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -377,88 +377,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CornerFixCL/main.c"
-            timestampString = "422419635.256061"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "main()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CornerFixCL/main.c"
-            timestampString = "422419635.256061"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "main()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "main"
-                  moduleName = "CornerFixCL"
-                  urlString = "file:///Users/mattbierner/Projects/cornerfix/CornerFix/CornerFixCL/main.c"
-                  timestampString = "422390619.152789"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "913">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__main_block_invoke_3"
-                  moduleName = "CornerFixCL"
-                  urlString = "file:///Users/mattbierner/Projects/cornerfix/CornerFix/CornerFixCL/main.c"
-                  timestampString = "422390619.153103"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__main_block_invoke_4"
-                  moduleName = "CornerFixCL"
-                  urlString = "file:///Users/mattbierner/Projects/cornerfix/CornerFix/CornerFixCL/main.c"
-                  timestampString = "422390619.153343"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "../libCornerFix/dng_win_glue.cpp"
-            timestampString = "422393054.867158"
+            timestampString = "422424971.952325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "287"
-            endingLineNumber = "287"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
             landmarkName = "dng_win_glue::saveCPFFile(NSString *file)"
             landmarkType = "5">
          </BreakpointContent>
@@ -470,12 +394,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../libCornerFix/dng_win_glue.cpp"
-            timestampString = "422393054.867158"
+            timestampString = "422424971.952325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "791"
-            endingLineNumber = "791"
-            landmarkName = "dng_win_glue::dng_validate ()"
+            startingLineNumber = "782"
+            endingLineNumber = "782"
+            landmarkName = "dng_win_glue::dng_validate()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -502,11 +426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CornerFixCL/main.c"
-            timestampString = "422419856.523153"
+            timestampString = "422426468.434344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "main()"
             landmarkType = "7">
          </BreakpointContent>
@@ -518,12 +442,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../libCornerFix/dng_win_glue.cpp"
-            timestampString = "422420092.546912"
+            timestampString = "422424971.952325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "825"
-            endingLineNumber = "825"
-            landmarkName = "dng_win_glue::dng_validate ()"
+            startingLineNumber = "816"
+            endingLineNumber = "816"
+            landmarkName = "dng_win_glue::dng_validate()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -534,12 +458,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../libCornerFix/dng_win_glue.cpp"
-            timestampString = "422420099.956509"
+            timestampString = "422424971.952325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "820"
-            endingLineNumber = "820"
-            landmarkName = "dng_win_glue::dng_validate ()"
+            startingLineNumber = "811"
+            endingLineNumber = "811"
+            landmarkName = "dng_win_glue::dng_validate()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -550,12 +474,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../libCornerFix/dng_win_glue.cpp"
-            timestampString = "422420121.937482"
+            timestampString = "422424971.952325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "959"
-            endingLineNumber = "959"
-            landmarkName = "dng_win_glue::dng_validate ()"
+            startingLineNumber = "950"
+            endingLineNumber = "950"
+            landmarkName = "dng_win_glue::dng_validate()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -566,11 +490,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/ImageProcessor.mm"
-            timestampString = "422420371.193982"
+            timestampString = "422425802.701014"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "555"
-            endingLineNumber = "555"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "-loadProfile:"
             landmarkType = "5">
          </BreakpointContent>
@@ -630,12 +554,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "src/ImageProcessor.mm"
-            timestampString = "422420448.379439"
+            timestampString = "422425802.701014"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "440"
-            endingLineNumber = "440"
-            landmarkName = "-processFile:ok:err:"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "-processFile:output:ok:err:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

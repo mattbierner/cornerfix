@@ -1,0 +1,5 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "CornerFix";
+CFBundleGetInfoString = "CornerFix version 1.0, Copyright (c) 2014 Sandy McGuffog.";
+NSHumanReadableCopyright = "© Sandy McGuffog, 2014";

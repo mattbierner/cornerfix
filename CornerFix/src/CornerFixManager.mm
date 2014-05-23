@@ -64,7 +64,7 @@
 #include "CornerFixFile.h"
 
 #include <unistd.h>
-
+#include <string>
 
 
 @implementation CornerFixManager
@@ -643,59 +643,5 @@
     for (NSString* file in files)
         [self createProfile:file ok:ok err:err];
 }
-
-/*
-- (IBAction) batchDocument: sender
-{
-	int result;
-    NSArray *fileTypes = [NSArray arrayWithObject:@"dng"];
-    NSOpenPanel *oPanel = [NSOpenPanel openPanel];
-	
-    [oPanel setAllowsMultipleSelection:YES];
-    if (imageDirectory) {
-        [oPanel setDirectoryURL:[NSURL fileURLWithPath:imageDirectory]];
-    }
-    [oPanel setAllowedFileTypes:fileTypes];
-    
-    result = [oPanel runModal];
-
-    if (result == NSOKButton) {
-		//[originalImage setImage:nil];
-		//[correctedImage setImage:nil];
-
-        NSArray *filesToOpen = [oPanel filenames];
-		[imageFiles release];
-		imageFiles = [filesToOpen retain];				
-		[outputFiles release];
-		outputFiles = [[self renameFiles:imageFiles suffix:@"_CF" ] retain];
-		[loadedCPFFiles release];
-		loadedCPFFiles = [cpfFiles retain];
-		cpfFiles = nil;
-		batchMode = true;
-		[self processImages];			
-    }	
-}*/
-
-- (IBAction) imageApplyHandler: sender
-{
-	[self prefsSignatureChanged];
-	[self processImages];				
-}
-
-
-
-- (void)observeValueForKeyPath:(NSString *)keyPath
-					  ofObject:(id)object
-                        change:(NSDictionary *)change
-                       context:(void *)context
-{
-//    if ([keyPath isEqual:@"antiAliasStrength"]) {
-//		NSLog(@"observeValueForKeyPath hit");
-//	}
-	[self processImages];
-    // We dont have a real superclass, so no need to call super
-}
-
-
 
 @end

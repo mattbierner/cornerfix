@@ -38,6 +38,16 @@
 		897AA785192C5049002F0F6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 897AA780192C5049002F0F6D /* InfoPlist.strings */; };
 		897AA786192C5049002F0F6D /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 897AA782192C5049002F0F6D /* MainMenu.nib */; };
 		89ADDE15192DA4D700CF0111 /* CornerFixFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 89471B70192D42CB0065B6A4 /* CornerFixFile.m */; };
+		89ADDE1C192DB94200CF0111 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ADDE1B192DB94200CF0111 /* Cocoa.framework */; };
+		89ADDE1E192DB94200CF0111 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ADDE1D192DB94200CF0111 /* AppKit.framework */; };
+		89ADDE20192DB94200CF0111 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ADDE1F192DB94200CF0111 /* CoreData.framework */; };
+		89ADDE22192DB94200CF0111 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ADDE21192DB94200CF0111 /* Foundation.framework */; };
+		89ADDE24192DB94200CF0111 /* PluginManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ADDE23192DB94200CF0111 /* PluginManager.framework */; };
+		89ADDE28192DB94200CF0111 /* CornerFixAperature-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89ADDE27192DB94200CF0111 /* CornerFixAperature-Info.plist */; };
+		89ADDE2B192DB94200CF0111 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89ADDE29192DB94200CF0111 /* InfoPlist.strings */; };
+		89ADDE32192DB94200CF0111 /* CornerFixAperatureEditPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 89ADDE31192DB94200CF0111 /* CornerFixAperatureEditPlugin.m */; };
+		89ADDE36192DB94200CF0111 /* CornerFixAperature.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89ADDE34192DB94200CF0111 /* CornerFixAperature.xib */; };
+		89ADDE39192DB94200CF0111 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89ADDE37192DB94200CF0111 /* Localizable.strings */; };
 		89F7AD83192C495200B83C33 /* libstaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7AD81192C492400B83C33 /* libstaticLib.a */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -186,6 +196,22 @@
 		897AA781192C5049002F0F6D /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = InfoPlist.strings; sourceTree = "<group>"; };
 		897AA783192C5049002F0F6D /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = MainMenu.nib; sourceTree = "<group>"; };
 		897AA787192C5083002F0F6D /* CornerFix_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CornerFix_Prefix.pch; sourceTree = "<group>"; };
+		89ADDE1A192DB94200CF0111 /* CornerFixAperature.ApertureEdit */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CornerFixAperature.ApertureEdit; sourceTree = BUILT_PRODUCTS_DIR; };
+		89ADDE1B192DB94200CF0111 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		89ADDE1D192DB94200CF0111 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		89ADDE1F192DB94200CF0111 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		89ADDE21192DB94200CF0111 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		89ADDE23192DB94200CF0111 /* PluginManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PluginManager.framework; path = Library/Frameworks/PluginManager.framework; sourceTree = DEVELOPER_DIR; };
+		89ADDE27192DB94200CF0111 /* CornerFixAperature-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CornerFixAperature-Info.plist"; sourceTree = "<group>"; };
+		89ADDE2A192DB94200CF0111 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		89ADDE2D192DB94200CF0111 /* ApertureEditManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ApertureEditManager.h; path = ApertureHeaders/ApertureEditManager.h; sourceTree = "<group>"; };
+		89ADDE2E192DB94200CF0111 /* ApertureEditPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ApertureEditPlugIn.h; path = ApertureHeaders/ApertureEditPlugIn.h; sourceTree = "<group>"; };
+		89ADDE2F192DB94200CF0111 /* ApertureSDKCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ApertureSDKCommon.h; path = ApertureHeaders/ApertureSDKCommon.h; sourceTree = "<group>"; };
+		89ADDE30192DB94200CF0111 /* CornerFixAperatureEditPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CornerFixAperatureEditPlugin.h; sourceTree = "<group>"; };
+		89ADDE31192DB94200CF0111 /* CornerFixAperatureEditPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CornerFixAperatureEditPlugin.m; sourceTree = "<group>"; };
+		89ADDE33192DB94200CF0111 /* CornerFixAperature-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CornerFixAperature-Prefix.pch"; sourceTree = "<group>"; };
+		89ADDE35192DB94200CF0111 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CornerFixAperature.xib; sourceTree = "<group>"; };
+		89ADDE38192DB94200CF0111 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		89BCB9A4192BD14800C5EB28 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		8D1107320486CEB800E47090 /* CornerFix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CornerFix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -198,6 +224,18 @@
 				89471B6B192D27EA0065B6A4 /* libArgumentParser-Static.a in Frameworks */,
 				89471B44192D021A0065B6A4 /* libstaticLib.a in Frameworks */,
 				89471B21192D016C0065B6A4 /* CoreServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89ADDE17192DB94100CF0111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89ADDE1C192DB94200CF0111 /* Cocoa.framework in Frameworks */,
+				89ADDE20192DB94200CF0111 /* CoreData.framework in Frameworks */,
+				89ADDE24192DB94200CF0111 /* PluginManager.framework in Frameworks */,
+				89ADDE1E192DB94200CF0111 /* AppKit.framework in Frameworks */,
+				89ADDE22192DB94200CF0111 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +301,7 @@
 			children = (
 				8D1107320486CEB800E47090 /* CornerFix.app */,
 				89471B20192D016C0065B6A4 /* CornerFixCL */,
+				89ADDE1A192DB94200CF0111 /* CornerFixAperature.ApertureEdit */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,6 +325,7 @@
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				89471B22192D016C0065B6A4 /* CornerFixCL */,
+				89ADDE25192DB94200CF0111 /* CornerFixAperature */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -326,6 +366,11 @@
 			children = (
 				89BCB9A4192BD14800C5EB28 /* CoreServices.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				89ADDE1B192DB94200CF0111 /* Cocoa.framework */,
+				89ADDE1D192DB94200CF0111 /* AppKit.framework */,
+				89ADDE1F192DB94200CF0111 /* CoreData.framework */,
+				89ADDE21192DB94200CF0111 /* Foundation.framework */,
+				89ADDE23192DB94200CF0111 /* PluginManager.framework */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -364,6 +409,39 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		89ADDE25192DB94200CF0111 /* CornerFixAperature */ = {
+			isa = PBXGroup;
+			children = (
+				89ADDE30192DB94200CF0111 /* CornerFixAperatureEditPlugin.h */,
+				89ADDE31192DB94200CF0111 /* CornerFixAperatureEditPlugin.m */,
+				89ADDE34192DB94200CF0111 /* CornerFixAperature.xib */,
+				89ADDE37192DB94200CF0111 /* Localizable.strings */,
+				89ADDE2C192DB94200CF0111 /* ApertureHeaders */,
+				89ADDE26192DB94200CF0111 /* Supporting Files */,
+			);
+			path = CornerFixAperature;
+			sourceTree = "<group>";
+		};
+		89ADDE26192DB94200CF0111 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89ADDE27192DB94200CF0111 /* CornerFixAperature-Info.plist */,
+				89ADDE29192DB94200CF0111 /* InfoPlist.strings */,
+				89ADDE33192DB94200CF0111 /* CornerFixAperature-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89ADDE2C192DB94200CF0111 /* ApertureHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				89ADDE2D192DB94200CF0111 /* ApertureEditManager.h */,
+				89ADDE2E192DB94200CF0111 /* ApertureEditPlugIn.h */,
+				89ADDE2F192DB94200CF0111 /* ApertureSDKCommon.h */,
+			);
+			name = ApertureHeaders;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -385,6 +463,23 @@
 			productName = CornerFixCL;
 			productReference = 89471B20192D016C0065B6A4 /* CornerFixCL */;
 			productType = "com.apple.product-type.tool";
+		};
+		89ADDE19192DB94100CF0111 /* CornerFixAperature */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89ADDE3A192DB94200CF0111 /* Build configuration list for PBXNativeTarget "CornerFixAperature" */;
+			buildPhases = (
+				89ADDE16192DB94100CF0111 /* Sources */,
+				89ADDE17192DB94100CF0111 /* Frameworks */,
+				89ADDE18192DB94100CF0111 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CornerFixAperature;
+			productName = CornerFixAperature;
+			productReference = 89ADDE1A192DB94200CF0111 /* CornerFixAperature.ApertureEdit */;
+			productType = "com.apple.product-type.bundle";
 		};
 		8D1107260486CEB800E47090 /* CornerFixApp */ = {
 			isa = PBXNativeTarget;
@@ -423,6 +518,7 @@
 				Japanese,
 				French,
 				German,
+				en,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CornerFix */;
 			projectDirPath = "";
@@ -440,6 +536,7 @@
 			targets = (
 				8D1107260486CEB800E47090 /* CornerFixApp */,
 				89471B1F192D016C0065B6A4 /* CornerFixCL */,
+				89ADDE19192DB94100CF0111 /* CornerFixAperature */,
 			);
 		};
 /* End PBXProject section */
@@ -504,6 +601,17 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		89ADDE18192DB94100CF0111 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89ADDE28192DB94200CF0111 /* CornerFixAperature-Info.plist in Resources */,
+				89ADDE39192DB94200CF0111 /* Localizable.strings in Resources */,
+				89ADDE2B192DB94200CF0111 /* InfoPlist.strings in Resources */,
+				89ADDE36192DB94200CF0111 /* CornerFixAperature.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D1107290486CEB800E47090 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -536,6 +644,14 @@
 				89471B6E192D3ADC0065B6A4 /* ImageProcessor.mm in Sources */,
 				89471B71192D42CB0065B6A4 /* CornerFixFile.m in Sources */,
 				89471B24192D016C0065B6A4 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89ADDE16192DB94100CF0111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89ADDE32192DB94200CF0111 /* CornerFixAperatureEditPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +715,30 @@
 				897AA783192C5049002F0F6D /* English */,
 			);
 			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		89ADDE29192DB94200CF0111 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89ADDE2A192DB94200CF0111 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		89ADDE34192DB94200CF0111 /* CornerFixAperature.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89ADDE35192DB94200CF0111 /* en */,
+			);
+			name = CornerFixAperature.xib;
+			sourceTree = "<group>";
+		};
+		89ADDE37192DB94200CF0111 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89ADDE38192DB94200CF0111 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -668,6 +808,85 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		89ADDE3B192DB94200CF0111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					/System/Library/Frameworks,
+					/Library/Frameworks,
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CornerFixAperature/CornerFixAperature-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "CornerFixAperature/CornerFixAperature-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Application Support/Aperture/Plug-Ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = ApertureEdit;
+			};
+			name = Release;
+		};
+		89ADDE3C192DB94200CF0111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					/System/Library/Frameworks,
+					/Library/Frameworks,
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CornerFixAperature/CornerFixAperature-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "CornerFixAperature/CornerFixAperature-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Application Support/Aperture/Plug-Ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = ApertureEdit;
 			};
 			name = Debug;
 		};
@@ -796,6 +1015,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		89ADDE3A192DB94200CF0111 /* Build configuration list for PBXNativeTarget "CornerFixAperature" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89ADDE3B192DB94200CF0111 /* Release */,
+				89ADDE3C192DB94200CF0111 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "CornerFixApp" */ = {
 			isa = XCConfigurationList;

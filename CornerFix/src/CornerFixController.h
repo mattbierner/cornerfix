@@ -45,7 +45,7 @@
 */
 
 #include "CFViewController.h"
-
+#include "ImageProcessor.h"
 class dng_win_glue;
 
 @interface CornerFixController : NSObject
@@ -61,6 +61,8 @@ class dng_win_glue;
     IBOutlet NSProgressIndicator *sheetProgress;
     IBOutlet NSTextField *sheetStatusField;
 	
+    ImageProcessor* processor;
+    
 	NSString * tempFile;
 	NSArray * loadedCPFFiles;
 	NSArray  * imageFiles;
