@@ -3,7 +3,6 @@
 #include "dng_win_glue.h"
 #include "dng_errors.h"
 
-#include "CornerFixFile.h"
 #include "CornerFixConfiguration.h"
 
 #include <string>

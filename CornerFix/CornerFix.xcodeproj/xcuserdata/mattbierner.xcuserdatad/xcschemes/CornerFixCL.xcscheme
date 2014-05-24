@@ -69,6 +69,10 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-p profile.cpf -i image.dng -o image_CF.dng"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-p profile.cpf -i image.dng  out/image1.dng -o out"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

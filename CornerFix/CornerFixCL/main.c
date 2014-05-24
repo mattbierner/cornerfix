@@ -39,8 +39,10 @@ bool convertImages(NSString* profileFile, NSArray* inputs, NSString* output) {
     
     if ([inputs count] > 1) {
         BOOL isDir;
-        if (![[NSFileManager defaultManager] fileExistsAtPath:output isDirectory:&isDir] || !isDir)
+        if (![[NSFileManager defaultManager] fileExistsAtPath:output isDirectory:&isDir] || !isDir) {
+            NSLog(@"Multiple inputs specified, expected existing output directory");
             return false;
+        }
     }
     
     NSError* configError;
@@ -54,13 +56,27 @@ bool convertImages(NSString* profileFile, NSArray* inputs, NSString* output) {
         return false;
     }
     
-    [processor
-        processFiles:inputs
-        outputName:^NSString*(NSString* file) {
-            return [CornerFixFile renameFile:file suffix:@"_CF"];
-        }
-        ok:^{}
-        err:^{}];
+    process_file_success ok = ^{};
+    process_file_failure err = ^{};
+    
+    if ([inputs count] > 1) {
+        [processor
+            processFiles:inputs
+            outputName:^NSString*(NSString* file) {
+                NSURL* rel = [NSURL URLWithString:file relativeToURL:[NSURL URLWithString:output]];
+                NSURL* url = [NSURL fileURLWithPathComponents:
+                    rel.path.length == 0 ? @[output, file] : @[output, [rel path]]];
+                return [CornerFixFile renameFile:url.relativePath suffix:@"_CF"];
+            }
+            ok:ok
+            err:err];
+    } else {
+        [processor
+            processFile:[inputs objectAtIndex:0]
+            output:output
+            ok:ok
+            err:err];
+    }
     
     return true;
 }
