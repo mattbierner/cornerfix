@@ -27,6 +27,8 @@
     NSInteger chroma;
 }
 
++ (CornerFixConfiguration*) defaults;
+
 + (CornerFixConfiguration*) fromUserDefaults:(NSUserDefaults*)options;
 
 @property (nonatomic) BOOL verboseMessages;

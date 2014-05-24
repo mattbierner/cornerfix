@@ -1,7 +1,6 @@
 #import "ImageProcessor.h"
 
 #include "dng_win_glue.h"
-#include "dng_local_printf.h"
 #include "dng_errors.h"
 
 #include "CornerFixFile.h"
@@ -25,14 +24,17 @@
     return [processor autorelease];
 }
 
+
 - (id) init
 {
-	glue = new dng_win_glue();
+    return [self initWithGlue:std::make_shared<dng_win_glue>()];
+}
 
+
+- (id) initWithGlue:(std::shared_ptr<dng_win_glue>)g
+{
+	glue = g;
 	fileManager = [NSFileManager defaultManager];
-		
-	dng_local_printf::setWorker(self);
-	
 	return self;
 }
 
@@ -68,7 +70,7 @@
                 forKey:NSLocalizedDescriptionKey]];
         return NO;
     }
-    
+
     if (!glue->setCPFFile(file))
     {
         *error = [NSError

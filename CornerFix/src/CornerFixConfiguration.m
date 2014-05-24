@@ -17,6 +17,28 @@
 @synthesize luminance;
 @synthesize chroma;
 
++ (CornerFixConfiguration*) defaults
+{
+    CornerFixConfiguration* config = [[CornerFixConfiguration alloc] init];
+    
+    config.verboseMessages = NO;
+    config.multipleEquations = NO;
+    config.luminanceCompensation = YES;
+    config.levelCompression = NO;
+    config.losslessCompression = NO;
+    config.updateEXIF = NO;
+    config.calculateAperture = YES;
+    config.clipAperature = YES;
+    config.maximizeResolution = NO;
+    config.appleDNGWorkaround = NO;
+    config.bidirectionalCorrection = YES;
+    
+    config.antiAliasStrength = 0;
+    config.luminance = 100;
+    config.chroma = 100;
+    return [config autorelease];
+}
+
 + (CornerFixConfiguration*) fromUserDefaults:(NSUserDefaults*)options
 {
     CornerFixConfiguration* config = [[CornerFixConfiguration alloc] init];

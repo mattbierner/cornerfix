@@ -11,10 +11,9 @@
 #include "ImageProcessor.h"
 
 #include <iostream>
-#include <sys/ioctl.h>
 
 NSString* getVersion() {
-    return @"0.0.0";
+    return [NSString stringWithUTF8String:CornerFixVersion];
 }
 
 void createProfiles(NSArray* inputs, NSString* output) {
@@ -45,7 +44,7 @@ bool convertImages(NSString* profileFile, NSArray* inputs, NSString* output) {
     NSError* configError;
     ImageProcessor* processor = [ImageProcessor
         processorForProfile:profileFile
-        config:[CornerFixConfiguration fromUserDefaults:[NSUserDefaults standardUserDefaults]]
+        config:[CornerFixConfiguration defaults]
         error:&configError];
     
     if (!processor) {

@@ -2,6 +2,7 @@
  *
  */
 #include <Foundation/Foundation.h>
+#include <memory>
 
 class dng_win_glue;
 @class CornerFixConfiguration;
@@ -12,7 +13,7 @@ typedef void(^process_file_failure)();
 
 @interface ImageProcessor : NSObject
 {
-	dng_win_glue* glue;
+	std::shared_ptr<dng_win_glue> glue;
 	NSFileManager* fileManager;
 }
 
@@ -21,6 +22,8 @@ typedef void(^process_file_failure)();
     error:(NSError**) error;
 
 - (id) init;
+
+- (id) initWithGlue:(std::shared_ptr<dng_win_glue>) glue;
 
 - (BOOL) loadConfiguration:(CornerFixConfiguration*) config
     error:(NSError**) error;
