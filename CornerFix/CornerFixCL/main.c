@@ -9,8 +9,10 @@
 #include "CornerFixConfiguration.h"
 #include "CornerFixVersion.h"
 #include "ImageProcessor.h"
+#include "CornerFixFile.h"
 
 #include <iostream>
+
 
 NSString* getVersion() {
     return [NSString stringWithUTF8String:CornerFixVersion];
@@ -52,7 +54,14 @@ bool convertImages(NSString* profileFile, NSArray* inputs, NSString* output) {
         return false;
     }
     
-    [processor processFiles:inputs ok:^{} err:^{}];
+    [processor
+        processFiles:inputs
+        outputName:^NSString*(NSString* file) {
+            return [CornerFixFile renameFile:file suffix:@"_CF"];
+        }
+        ok:^{}
+        err:^{}];
+    
     return true;
 }
 

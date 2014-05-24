@@ -105,11 +105,12 @@
 
 
 - (void) processFiles:(NSArray*) files
+    outputName:(process_file_output_name) namer
     ok:(process_file_success) ok
     err:(process_file_failure) err
 {
     for (NSString* file in files)
-        [self processFile:file output:[CornerFixFile renameFile:file suffix:@"_CF"] ok:ok err:err];
+        [self processFile:file output:namer(file) ok:ok err:err];
 }
 
 @end

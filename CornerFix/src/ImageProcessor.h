@@ -10,6 +10,8 @@ class dng_win_glue;
 typedef void(^process_file_success)();
 typedef void(^process_file_failure)();
 
+typedef NSString*(^process_file_output_name)(NSString*);
+
 
 @interface ImageProcessor : NSObject
 {
@@ -37,6 +39,7 @@ typedef void(^process_file_failure)();
     err:(process_file_failure) err;
 
 - (void) processFiles:(NSArray*)files
+    outputName:(process_file_output_name) namer
     ok:(process_file_success) ok
     err:(process_file_failure) err;
 
