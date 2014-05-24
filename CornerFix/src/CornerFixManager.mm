@@ -63,7 +63,6 @@
 #include "ImageProcessor.h"
 #include "CornerFixFile.h"
 
-#include <unistd.h>
 #include <string>
 
 
@@ -498,12 +497,6 @@
 }
 */
 
-- (void) processFile:(NSString*) file
-    ok:(void(^)())ok
-    err:(void(^)())err
-{
-    [processor processFile:file ok:ok err:err];
-}
 
 /*
 - (IBAction) openProfile: __unused sender

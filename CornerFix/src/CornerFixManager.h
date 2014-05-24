@@ -33,10 +33,6 @@ class dng_win_glue;
 
 - (dng_win_glue*) configureGlue:(dng_win_glue*) glue;
 
-- (void) processFile:(NSString*)file
-    ok:(void(^)())ok
-    err:(void(^)())err;
-
 - (void) createProfile:(NSString*) file
     ok:(void(^)()) ok
     err:(void(^)()) err;

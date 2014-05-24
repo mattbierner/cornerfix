@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>25284697-7AFD-489A-9D3D-5FCCD9CD8D57</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CornerFix</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>01E9DCE8-AA0F-4B9E-8B66-EFA0510285D0</key>
+		<string>https://github.com/mattbierner/cornerfix.git</string>
+		<key>58C9B171-B6C5-461A-B33C-D509F9413921</key>
+		<string>ssh://github.com/beelsebob/CoreParse.git</string>
+		<key>F05C93B2-6B50-417A-8C2E-E5598C792E41</key>
+		<string>https://github.com/NSError/ArgumentParser.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CornerFix/CornerFix.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>01E9DCE8-AA0F-4B9E-8B66-EFA0510285D0</key>
+		<string>../../..</string>
+		<key>58C9B171-B6C5-461A-B33C-D509F9413921</key>
+		<string>../../../lib/ArgumentParser/CoreParse</string>
+		<key>F05C93B2-6B50-417A-8C2E-E5598C792E41</key>
+		<string>../../../lib/ArgumentParser</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mattbierner/cornerfix.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>01E9DCE8-AA0F-4B9E-8B66-EFA0510285D0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F05C93B2-6B50-417A-8C2E-E5598C792E41</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ArgumentParser</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>58C9B171-B6C5-461A-B33C-D509F9413921</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CoreParse</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>01E9DCE8-AA0F-4B9E-8B66-EFA0510285D0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>cornerfix</string>
+		</dict>
+	</array>
+</dict>
+</plist>

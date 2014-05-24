@@ -6,8 +6,16 @@
 #include "FSArguments.h"
 
 #include "CornerFixManager.h"
+#include "CornerFixConfiguration.h"
+#include "CornerFixVersion.h"
 #include "ImageProcessor.h"
 
+#include <iostream>
+#include <sys/ioctl.h>
+
+NSString* getVersion() {
+    return @"0.0.0";
+}
 
 void createProfiles(NSArray* inputs, NSString* output) {
     if ([inputs count] > 1) {
@@ -24,37 +32,72 @@ void createProfiles(NSArray* inputs, NSString* output) {
     exit(EXIT_SUCCESS);
 }
 
-void convertImages(NSString* profileFile, NSArray* inputs, NSString* output) {
-    if (!profileFile || ![[NSFileManager defaultManager] fileExistsAtPath:profileFile]) {
-        exit(EXIT_FAILURE);
-    }
+bool convertImages(NSString* profileFile, NSArray* inputs, NSString* output) {
+    if (!profileFile || ![[NSFileManager defaultManager] fileExistsAtPath:profileFile])
+        return false;
+    
     if ([inputs count] > 1) {
         BOOL isDir;
-        if (![[NSFileManager defaultManager] fileExistsAtPath:output isDirectory:&isDir] || !isDir) {
-            exit(EXIT_FAILURE);
-        }
+        if (![[NSFileManager defaultManager] fileExistsAtPath:output isDirectory:&isDir] || !isDir)
+            return false;
     }
     
-    ImageProcessor* processor = [ImageProcessor processorForProfile:profileFile config:[NSUserDefaults standardUserDefaults]];
+    NSError* configError;
+    ImageProcessor* processor = [ImageProcessor
+        processorForProfile:profileFile
+        config:[CornerFixConfiguration fromUserDefaults:[NSUserDefaults standardUserDefaults]]
+        error:&configError];
+    
+    if (!processor) {
+        NSLog(@"%@", [configError localizedDescription]);
+        return false;
+    }
+    
     [processor processFiles:inputs ok:^{} err:^{}];
+    return true;
 }
 
 int main(int __unused argc, const char* __unused argv[])
 {
     FSArgumentSignature
         * help = [FSArgumentSignature argumentSignatureWithFormat:@"[-h --help]"],
+        * version = [FSArgumentSignature argumentSignatureWithFormat:@"[--version]"],
+
         * createProfile = [FSArgumentSignature argumentSignatureWithFormat:@"[-m --make-profile]"],
     
         * profile = [FSArgumentSignature argumentSignatureWithFormat:@"[-p --profile]="],
         * config = [FSArgumentSignature argumentSignatureWithFormat:@"[-c --config]="],
     
-        * outputFile = [FSArgumentSignature argumentSignatureWithFormat:@"[-o --output of]="],
-    
-        * inputFile = [FSArgumentSignature argumentSignatureWithFormat:@"[-i --input if]={1,}"];
+        * outputFile = [FSArgumentSignature argumentSignatureWithFormat:@"[-o --output]="],
+        * inputFile = [FSArgumentSignature argumentSignatureWithFormat:@"[-i --input]={1,}"];
 
-    NSArray* signatures = @[help, createProfile, profile, config, outputFile, inputFile];
+    NSArray* signatures = @[help, version, createProfile, profile, config, outputFile, inputFile];
 
     FSArgumentPackage* package = [[NSProcessInfo processInfo] fsargs_parseArgumentsWithSignatures:signatures];
+
+    
+    if ([package booleanValueForSignature:help]) {
+        std::cout
+            << "Cornerfix " << [getVersion() UTF8String] << std::endl
+            << std::endl
+            << "\tcornerfix [--config=config.plist] --profile=lens.cpf -o corrected.dng -i input.dng ..." << std::endl
+            << "\tcornerfix --make-profile [--config=config.plist] -o profile.cpf -i reference_image.dng ..." << std::endl
+            << "\tcornerfix [-h --help] [--version]" << std::endl
+            << std::endl
+            << "\t-h --help\tShow this help message." << std::endl
+            << "\t--version\tPrint version." << std::endl
+            << "\t-m --make-profile\tCreate cornerfix lens profiles from input DNG files and write CPF to outputs." << std::endl
+            << "\t-p --profile=file.cpf\tCPF lens correction profile." << std::endl
+            << "\t-c --config=config.plist\tOptional CornerFix configuration." << std::endl;
+
+        exit(EXIT_SUCCESS);
+    }
+    
+    if ([package booleanValueForSignature:version]) {
+        std::cout << [getVersion() UTF8String] << std::endl;
+        exit(EXIT_SUCCESS);
+    }
+    
     
     NSArray* inputs = [package allObjectsForSignature:inputFile];
     NSString* output = [package firstObjectForSignature:outputFile];
@@ -63,9 +106,9 @@ int main(int __unused argc, const char* __unused argv[])
         createProfiles(inputs, output);
     } else { // convert images
         NSString* profileFile = [package firstObjectForSignature:profile];
-        convertImages(profileFile, inputs, output);
+        bool success = convertImages(profileFile, inputs, output);
+        exit(success ? EXIT_SUCCESS : EXIT_FAILURE);
     }
 
     exit(EXIT_SUCCESS);
-
 }

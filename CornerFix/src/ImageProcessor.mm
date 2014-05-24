@@ -1,25 +1,28 @@
 #import "ImageProcessor.h"
 
-#include "dng_local_printf.h"
 #include "dng_win_glue.h"
+#include "dng_local_printf.h"
 #include "dng_errors.h"
 
-#include "CornerFixVersion.h"
 #include "CornerFixFile.h"
+#include "CornerFixConfiguration.h"
 
-#include <unistd.h>
 #include <string>
 
 @implementation ImageProcessor
 
-
-+ (id) processorForProfile:(NSString *)profile
-    config:(NSUserDefaults *)config
++ (id) processorForProfile:(NSString*)profile
+    config:(CornerFixConfiguration*)config
+    error:(NSError**) error
 {
     ImageProcessor* processor = [[ImageProcessor alloc] init];
-    [processor loadConfiguration:config];
-    [processor loadProfile:profile];
-    return processor;
+    
+    if (![processor loadConfiguration:config error:error])
+        return nil;
+    if (![processor loadProfile:profile error:error])
+        return nil;
+    
+    return [processor autorelease];
 }
 
 - (id) init
@@ -33,10 +36,58 @@
 	return self;
 }
 
-- (void) processFile:(NSString*)file
-    output:(NSString*)output
-    ok:(void(^)())ok
-    err:(void(^)())err
+
+- (BOOL) loadConfiguration:(CornerFixConfiguration*)config error:(NSError**) __unused error
+{
+    glue->setVerbose(config.verboseMessages);
+    glue->setMultiple(config.multipleEquations);
+    glue->setDisableIlluminant(!config.luminanceCompensation);
+    glue->SetAntiAlias((int)config.antiAliasStrength);
+    glue->SetLumaStrength((int)config.luminance);
+    glue->SetChromaStrength((int)config.chroma);
+    glue->setCompress(config.levelCompression);
+    glue->setLossless(config.losslessCompression);
+    glue->setExifUpdate(config.updateEXIF);
+    glue->setCalculateAperture(config.calculateAperture);
+    glue->setClipApertures(config.clipAperature);
+    glue->setMaximizeResolution(config.maximizeResolution);
+    glue->setOverwriteCameraName(config.appleDNGWorkaround);
+    glue->setAsymetry(config.bidirectionalCorrection ? 1.0 : 500);
+    
+    return YES;
+}
+
+- (BOOL) loadProfile:(NSString *)file error:(NSError**) error
+{
+    if (![fileManager isReadableFileAtPath:file]) {
+        *error = [NSError
+            errorWithDomain:@"cornerfix"
+            code:dng_error_read_file
+            userInfo:[NSDictionary
+                dictionaryWithObject:[NSString stringWithFormat:@"Could not read profile:%@", file]
+                forKey:NSLocalizedDescriptionKey]];
+        return NO;
+    }
+    
+    if (!glue->setCPFFile(file))
+    {
+        *error = [NSError
+            errorWithDomain:@"cornerfix"
+            code:dng_error_read_file
+            userInfo:[NSDictionary
+                dictionaryWithObject:[NSString stringWithFormat:@"Could not processes profile:%@", file]
+                forKey:NSLocalizedDescriptionKey]];
+        return NO;
+    }
+    
+    return YES;
+}
+
+
+- (void) processFile:(NSString*) file
+    output:(NSString*) output
+    ok:(process_file_success) ok
+    err:(process_file_failure) err
 {
     if (![fileManager isReadableFileAtPath:file])
         err();
@@ -51,51 +102,12 @@
 }
 
 
-- (void) processFiles:(NSArray*)files
-    ok:(void(^)())ok
-    err:(void(^)())err
+- (void) processFiles:(NSArray*) files
+    ok:(process_file_success) ok
+    err:(process_file_failure) err
 {
     for (NSString* file in files)
         [self processFile:file output:[CornerFixFile renameFile:file suffix:@"_CF"] ok:ok err:err];
-}
-
-
-- (void) loadConfiguration:(NSUserDefaults *)options
-{
-    glue->setVerbose([options boolForKey:@"verboseMessages"]);
-    glue->setMultiple([options boolForKey:@"multipleEquations"]);
-    glue->setDisableIlluminant(![options boolForKey:@"luminanceCompensation"]);
-    glue->SetAntiAlias([options integerForKey:@"antiAliasStrength"]);
-    glue->SetLumaStrength([options integerForKey:@"luminance"]);
-    glue->SetChromaStrength([options integerForKey:@"chroma"]);
-    glue->setCompress([options boolForKey:@"levelCompression"]);
-    glue->setLossless([options boolForKey:@"losslessCompression"]);
-    glue->setExifUpdate([options boolForKey:@"updateEXIF"]);
-    glue->setCalculateAperture([options boolForKey:@"calculateAperture"]);
-    glue->setClipApertures([options boolForKey:@"clipAperture"]);
-    glue->setMaximizeResolution([options boolForKey:@"maximizeResolution"]);
-    glue->setOverwriteCameraName([options boolForKey:@"appleDNGWorkaround"]);
-    glue->setAsymetry([options boolForKey:@"bidirectionalCorrection"] ? 1.0 : 500);
-}
-
-
-- (void) loadProfile:(NSString *)file
-{
-    if ([fileManager isReadableFileAtPath:file]) {
-        if (!glue->setCPFFile(file))
-        {
-            /*NSAlert *alert = [[NSAlert alloc] init];
-            [alert addButtonWithTitle:@"OK"];
-            [alert setMessageText:@"That does not apper to be a valid lens profile"];
-            [alert setInformativeText:@"Try again...."];
-            [alert setAlertStyle:NSWarningAlertStyle];
-            
-            if ([alert runModal] == NSAlertFirstButtonReturn) {
-                // OK clicked
-            }
-            [alert release];*/
-        }
-    }
 }
 
 @end

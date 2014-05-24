@@ -48,6 +48,7 @@
 		89ADDE32192DB94200CF0111 /* CornerFixAperatureEditPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 89ADDE31192DB94200CF0111 /* CornerFixAperatureEditPlugin.m */; };
 		89ADDE36192DB94200CF0111 /* CornerFixAperature.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89ADDE34192DB94200CF0111 /* CornerFixAperature.xib */; };
 		89ADDE39192DB94200CF0111 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89ADDE37192DB94200CF0111 /* Localizable.strings */; };
+		89DFD8A1193046E700B11A20 /* CornerFixConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DFD8A0193046E700B11A20 /* CornerFixConfiguration.m */; };
 		89F7AD83192C495200B83C33 /* libstaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F7AD81192C492400B83C33 /* libstaticLib.a */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -213,6 +214,8 @@
 		89ADDE35192DB94200CF0111 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CornerFixAperature.xib; sourceTree = "<group>"; };
 		89ADDE38192DB94200CF0111 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		89BCB9A4192BD14800C5EB28 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		89DFD89F193046E700B11A20 /* CornerFixConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CornerFixConfiguration.h; path = src/CornerFixConfiguration.h; sourceTree = "<group>"; };
+		89DFD8A0193046E700B11A20 /* CornerFixConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CornerFixConfiguration.m; path = src/CornerFixConfiguration.m; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* CornerFix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CornerFix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -254,6 +257,8 @@
 		080E96DDFE201D6D7F000001 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				89DFD89F193046E700B11A20 /* CornerFixConfiguration.h */,
+				89DFD8A0193046E700B11A20 /* CornerFixConfiguration.m */,
 				89471B6C192D3ADC0065B6A4 /* ImageProcessor.h */,
 				89471B6D192D3ADC0065B6A4 /* ImageProcessor.mm */,
 				2660E5BA1063D4CF00E99A08 /* CFViewController.h */,
@@ -640,6 +645,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89DFD8A1193046E700B11A20 /* CornerFixConfiguration.m in Sources */,
 				89471B47192D09160065B6A4 /* CornerFixManager.mm in Sources */,
 				89471B6E192D3ADC0065B6A4 /* ImageProcessor.mm in Sources */,
 				89471B71192D42CB0065B6A4 /* CornerFixFile.m in Sources */,
@@ -1023,6 +1029,7 @@
 				89ADDE3C192DB94200CF0111 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "CornerFixApp" */ = {
 			isa = XCConfigurationList;
